@@ -2,6 +2,8 @@
 
 A cinematic portfolio bringing together two years of web development, graphic design, photography and video work.
 
+**Live website: [lakshitha-creative-portfolio](https://sandaruwan44.github.io/lakshitha-creative-portfolio/)**
+
 The collection contains **23 projects**:
 
 - 9 websites from first- and second-year studies.
@@ -64,4 +66,4 @@ Original coursework files and photographer watermarks are retained. Some media f
 
 Graphic pieces featuring existing brands, public figures or characters are presented as student design studies and concepts. The font license files are included in `assets/fonts/`.
 
-This repository contains the portfolio source. GitHub Pages deployment is not configured.
+GitHub Pages publishes the website through the `Publish portfolio` workflow whenever `main` changes. The workflow downloads the original Git LFS media, checks the static files and deploys the finished website. Its progress is visible in the repository's Actions tab.
