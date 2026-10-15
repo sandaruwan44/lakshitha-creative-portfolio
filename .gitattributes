@@ -13,3 +13,28 @@
 *.mp4 binary
 *.MOV binary
 *.ttf binary
+assets/graphics/japan-magic-country-book-jacket.png filter=lfs diff=lfs merge=lfs -text
+assets/graphics/open-campus-station-pillar.png filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/The[[:space:]]Weirdest[[:space:]]F1[[:space:]]Start[[:space:]]Ever![[:space:]][[:space:]]2021[[:space:]]Hungarian[[:space:]]Grand[[:space:]]Prix[[:space:]]-[[:space:]]FORMULA[[:space:]]1[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/formula-1-ferrari-car.3840x2160.mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/img/copy_F5B8595E-F001-4102-995F-DCD4428D97ED.MOV filter=lfs diff=lfs merge=lfs -text
+assets/backgrounds/portfolio-cinematic.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/graphics/demon-slayer-thunder-fire.png filter=lfs diff=lfs merge=lfs -text
+assets/graphics/open-campus-subway-mockup.png filter=lfs diff=lfs merge=lfs -text
+assets/graphics/open-campus-turquoise.png filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/4k[[:space:]]Video[[:space:]][[:space:]]Technology[[:space:]]Looped[[:space:]]Background[[:space:]][[:space:]]No[[:space:]]Copyright[[:space:]]Loop[[:space:]]Background[[:space:]]Video[[:space:]]-[[:space:]]Infinite[[:space:]]Visual[[:space:]](1080p,[[:space:]]h264)[[:space:]](1).mp4 filter=lfs diff=lfs merge=lfs -text
+assets/graphics/open-campus-pink.png filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/my/img/スリランカ[[:space:]]―[[:space:]]遺産とおもてなしの国[[:space:]]🇱🇰(Sri[[:space:]]Lanka[[:space:]]–The[[:space:]]Land[[:space:]]of[[:space:]]Heritage[[:space:]]and[[:space:]]Hospitality)[[:space:]]-[[:space:]]Gaming[[:space:]]Mello[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/sri-lanka-guide/Sri[[:space:]]Lanka[[:space:]][[:space:]]4K[[:space:]]Cinematic[[:space:]]Travel[[:space:]]Film[[:space:]]-[[:space:]]Lalit[[:space:]]Choudhary[[:space:]]Films[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/sri-lanka-guide/img/1.jpg filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/Lewis[[:space:]]Hamilton[[:space:]]Vs[[:space:]]APEX[[:space:]]GP[[:space:]](Climax)[[:space:]][[:space:]]Final[[:space:]]Race[[:space:]]Scene[[:space:]][[:space:]]F1®[[:space:]]The[[:space:]]Movie[[:space:]][[:space:]]4K[[:space:]]HDR[[:space:]]-[[:space:]]JustVibhor[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/4k[[:space:]]Video[[:space:]][[:space:]]Technology[[:space:]]Looped[[:space:]]Background[[:space:]][[:space:]]No[[:space:]]Copyright[[:space:]]Loop[[:space:]]Background[[:space:]]Video[[:space:]]-[[:space:]]Infinite[[:space:]]Visual[[:space:]](1080p,[[:space:]]h264)[[:space:]](1).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/Lewis[[:space:]]Hamilton[[:space:]]Vs[[:space:]]APEX[[:space:]]GP[[:space:]](Climax)[[:space:]][[:space:]]Final[[:space:]]Race[[:space:]]Scene[[:space:]][[:space:]]F1®[[:space:]]The[[:space:]]Movie[[:space:]][[:space:]]4K[[:space:]]HDR[[:space:]]-[[:space:]]JustVibhor[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/The[[:space:]]Weirdest[[:space:]]F1[[:space:]]Start[[:space:]]Ever![[:space:]][[:space:]]2021[[:space:]]Hungarian[[:space:]]Grand[[:space:]]Prix[[:space:]]-[[:space:]]FORMULA[[:space:]]1[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/my/img/スリランカ[[:space:]]―[[:space:]]遺産とおもてなしの国[[:space:]]🇱🇰(Sri[[:space:]]Lanka[[:space:]]–The[[:space:]]Land[[:space:]]of[[:space:]]Heritage[[:space:]]and[[:space:]]Hospitality)[[:space:]]-[[:space:]]Gaming[[:space:]]Mello[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/sri-lanka-guide/Sri[[:space:]]Lanka[[:space:]][[:space:]]4K[[:space:]]Cinematic[[:space:]]Travel[[:space:]]Film[[:space:]]-[[:space:]]Lalit[[:space:]]Choudhary[[:space:]]Films[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/Lewis[[:space:]]Hamilton[[:space:]]Vs[[:space:]]APEX[[:space:]]GP[[:space:]](Climax)[[:space:]][[:space:]]Final[[:space:]]Race[[:space:]]Scene[[:space:]][[:space:]]F1®[[:space:]]The[[:space:]]Movie[[:space:]][[:space:]]4K[[:space:]]HDR[[:space:]]-[[:space:]]JustVibhor[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/The[[:space:]]Weirdest[[:space:]]F1[[:space:]]Start[[:space:]]Ever![[:space:]][[:space:]]2021[[:space:]]Hungarian[[:space:]]Grand[[:space:]]Prix[[:space:]]-[[:space:]]FORMULA[[:space:]]1[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/my/img/スリランカ[[:space:]]―[[:space:]]遺産とおもてなしの国[[:space:]]🇱🇰(Sri[[:space:]]Lanka[[:space:]]–The[[:space:]]Land[[:space:]]of[[:space:]]Heritage[[:space:]]and[[:space:]]Hospitality)[[:space:]]-[[:space:]]Gaming[[:space:]]Mello[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/sri-lanka-guide/Sri[[:space:]]Lanka[[:space:]][[:space:]]4K[[:space:]]Cinematic[[:space:]]Travel[[:space:]]Film[[:space:]]-[[:space:]]Lalit[[:space:]]Choudhary[[:space:]]Films[[:space:]](1080p,[[:space:]]h264).mp4 filter=lfs diff=lfs merge=lfs -text
+projects/year1-portfolio/1204/img/4k[[:space:]]Video[[:space:]][[:space:]]Technology[[:space:]]Looped[[:space:]]Background[[:space:]][[:space:]]No[[:space:]]Copyright[[:space:]]Loop[[:space:]]Background[[:space:]]Video[[:space:]]-[[:space:]]Infinite[[:space:]]Visual[[:space:]](1080p,[[:space:]]h264)[[:space:]](1).mp4 filter=lfs diff=lfs merge=lfs -text

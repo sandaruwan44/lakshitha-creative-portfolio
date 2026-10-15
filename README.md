@@ -13,6 +13,17 @@ The first-year portfolio's profile, skills, individual websites, unique artworks
 
 ## Preview locally
 
+Large media files use Git LFS. Install Git LFS, then clone with the media files:
+
+```sh
+git lfs install
+git clone https://github.com/sandaruwan44/lakshitha-creative-portfolio.git
+cd lakshitha-creative-portfolio
+git lfs pull
+```
+
+Use a Git LFS clone to obtain every original media file; GitHub's source ZIP may contain LFS pointers.
+
 Open `index.html` directly, or serve this directory with Python:
 
 ```sh
