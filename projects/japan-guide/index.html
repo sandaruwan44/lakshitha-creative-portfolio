@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan Tourists Guide</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Japan Tourists Guide Home">
+        <span class="brand__mark">⛩</span>
+        <span class="brand__text">Japan Tourists Guide</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav__toggle-bars"></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Primary Navigation">
+        <a class="nav__link" href="#spots">Spots</a>
+        <a class="nav__link" href="#info">Information</a>
+        <a class="nav__link" href="#tips">Travel Tips</a>
+        <a class="nav__link nav__cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+          <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="img/tokyo.jpg"
+        >
+          <source src="img/Dear Japan  Cinematic Travel Film  Sony A7C II - Chawin.P (720p, h264).mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__kicker">
+          Welcome / ようこそ
+        </p>
+
+        <h1 class="hero__title">
+          Discover Japan<br />
+          <span class="hero__title-accent">One Unforgettable Journey</span>
+          <span class="jp hero__jp-sub">日本を発見しよう — 忘れられない旅へ。</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          Explore iconic cities, hidden gems, and must-know travel info — designed for international visitors.
+          <span class="jp">日本の魅力を、もっと近くに。</span>
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#spots">Explore Spots</a>
+          <a class="btn btn--ghost" href="#info">View Info</a>
+        </div>
+
+        <div class="hero__badges" aria-label="Highlights">
+          <div class="badge">
+            <span class="badge__title">Best Season</span>
+            <span class="badge__value">Spring / Autumn</span>
+            <span class="jp badge__jp">春 / 秋</span>
+          </div>
+          <div class="badge">
+            <span class="badge__title">Ideal For</span>
+            <span class="badge__value">Food • Culture • City</span>
+            <span class="jp badge__jp">食 • 文化 • 都市</span>
+          </div>
+          <div class="badge">
+            <span class="badge__title">Language</span>
+            <span class="badge__value">EN / 日本語</span>
+            <span class="jp badge__jp">英語 / 日本語</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#spots" aria-label="Scroll to spots">
+        <span>Scroll</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 16l-6-6h12z"></path>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Spots -->
+    <section class="section" id="spots">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Top Spots</h2>
+            <span class="jp section__jp">人気スポット</span>
+          </div>
+          <p class="section__desc">
+            A few must-visit places for first-time travelers. Click “Details” for quick info.
+            <span class="jp">初めての旅行におすすめ。 「Details」で住所・時間・アクセスを確認できます。</span>
+          </p>
+        </div>
+
+        <div class="grid" role="list">
+          <!-- Spot 1 -->
+          <article class="card" role="listitem">
+            <div class="card__img">
+              <img src="img/shibuya.jpg" alt="Tokyo city view" loading="lazy" />
+              <span class="card__tag">Tokyo</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                Shibuya & Meiji Shrine
+                <span class="jp">渋谷・明治神宮</span>
+              </h3>
+              <p class="card__text">
+                Experience neon streets and calm tradition — a perfect mix of modern life and heritage.
+                <span class="jp">ネオンと伝統が共存する東京の魅力を体験できます。</span>
+              </p>
+              <div class="card__meta">
+                <span>⏱ 2–4 hrs</span>
+                <span>🚆 JR / Metro</span>
+                <span>📸 Photo Spot</span>
+              </div>
+              <button
+                class="btn btn--small btn--outline spotBtn"
+                data-title="Shibuya & Meiji Shrine (Tokyo)"
+                data-address="1-1 Yoyogikamizonocho, Shibuya City, Tokyo"
+                data-hours="Meiji Shrine: Sunrise–Sunset (varies by season)"
+                data-access="JR Yamanote Line: Harajuku Station (5 min walk) / Metro: Meiji-jingumae"
+                data-note="Try visiting early morning for a quieter experience."
+              >
+                Details
+              </button>
+            </div>
+          </article>
+
+          <!-- Spot 2 -->
+          <article class="card" role="listitem">
+            <div class="card__img">
+              <img src="img/kyoto.jpg" alt="Kyoto temple and streets" loading="lazy" />
+              <span class="card__tag">Kyoto</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                Fushimi Inari Taisha
+                <span class="jp">伏見稲荷大社</span>
+              </h3>
+              <p class="card__text">
+                Walk through thousands of iconic torii gates — one of Japan’s most famous cultural sights.
+                <span class="jp">千本鳥居で有名な神社。写真スポットとしても人気です。</span>
+              </p>
+              <div class="card__meta">
+                <span>⏱ 2–3 hrs</span>
+                <span>🥾 Easy hike</span>
+                <span>⛩ Shrine</span>
+              </div>
+              <button
+                class="btn btn--small btn--outline spotBtn"
+                data-title="Fushimi Inari Taisha (Kyoto)"
+                data-address="68 Fukakusa Yabunouchicho, Fushimi Ward, Kyoto"
+                data-hours="Open 24 hours (best at sunrise / evening)"
+                data-access="JR Nara Line: Inari Station (right outside) / Keihan: Fushimi-Inari"
+                data-note="Go further up the trail for fewer crowds and better photos."
+              >
+                Details
+              </button>
+            </div>
+          </article>
+
+          
+          <article class="card" role="listitem">
+            <div class="card__img">
+              <img src="img/osaka.jpg" alt="Osaka Dotonbori at night" loading="lazy" />
+              <span class="card__tag">Osaka</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                Dotonbori & Street Food
+                <span class="jp">道頓堀・食べ歩き</span>
+              </h3>
+              <p class="card__text">
+                Taste Osaka’s takoyaki and okonomiyaki while enjoying lively nightlife by the canal.
+                <span class="jp">たこ焼き・お好み焼きを楽しみながら夜景散歩。</span>
+              </p>
+              <div class="card__meta">
+                <span>⏱ 2–5 hrs</span>
+                <span>🍜 Food</span>
+                <span>🌙 Night Walk</span>
+              </div>
+              <button
+                class="btn btn--small btn--outline spotBtn"
+                data-title="Dotonbori (Osaka)"
+                data-address="Dotonbori, Chuo Ward, Osaka"
+                data-hours="Area is always open; shops usually 11:00–23:00"
+                data-access="Metro: Namba Station (5–10 min walk)"
+                data-note="Try the Glico sign photo spot at night!"
+              >
+                Details
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information -->
+    <section class="section section--alt" id="info">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Information</h2>
+            <span class="jp section__jp">基本情報</span>
+          </div>
+          <p class="section__desc">
+            Quick essentials: transport, payment, etiquette, seasons, internet, and safety.
+            <span class="jp">交通・支払い・マナー・季節・ネット・安全情報をまとめました。</span>
+          </p>
+        </div>
+
+        <div class="info">
+          <div class="info__card">
+            <h3>🚆 Transport <span class="jp">交通</span></h3>
+            <p>
+              Use IC cards (Suica / PASMO / ICOCA) for easy rides. Shinkansen is fastest for long distance.
+              <span class="jp">ICカードは便利。長距離は新幹線が速いです。</span>
+            </p>
+            <ul class="list">
+              <li>IC card: tap-in/tap-out <span class="jp">改札でタッチ</span></li>
+              <li>Google Maps works great <span class="jp">Googleマップが便利</span></li>
+              <li>Consider passes for frequent travel <span class="jp">周遊パスも検討</span></li>
+            </ul>
+          </div>
+
+          <div class="info__card">
+            <h3>💴 Payment <span class="jp">支払い</span></h3>
+            <p>
+              Cards are common in cities, but small shops may prefer cash. Keep some yen.
+              <span class="jp">都市部はカード可でも、現金が必要な店もあります。</span>
+            </p>
+            <ul class="list">
+              <li>Cash still useful <span class="jp">現金は便利</span></li>
+              <li>Convenience stores accept cards <span class="jp">コンビニはカードOK</span></li>
+              <li>ATMs: 7-Eleven / Japan Post <span class="jp">ATM: セブン/郵便局</span></li>
+            </ul>
+          </div>
+
+          <div class="info__card">
+            <h3>🙏 Etiquette <span class="jp">マナー</span></h3>
+            <p>
+              Be quiet on trains and respect shrine/temple rules.
+              <span class="jp">電車では静かに。寺社のルールを守りましょう。</span>
+            </p>
+            <ul class="list">
+              <li>Queue patiently <span class="jp">並ぶ文化</span></li>
+              <li>No loud calls on trains <span class="jp">車内通話は控える</span></li>
+              <li>Carry a small trash bag <span class="jp">ゴミ袋が便利</span></li>
+            </ul>
+          </div>
+
+          <div class="info__card">
+            <h3>🌸 Seasons <span class="jp">季節</span></h3>
+            <p>
+              Spring for cherry blossoms, autumn for colorful leaves. Summer is hot & humid.
+              <span class="jp">春は桜、秋は紅葉。夏は暑く湿気が多いです。</span>
+            </p>
+            <ul class="list">
+              <li>Best months: Mar–Apr / Oct–Nov <span class="jp">3〜4月 / 10〜11月</span></li>
+              <li>Pack layers in spring/autumn <span class="jp">重ね着がおすすめ</span></li>
+            </ul>
+          </div>
+
+          <div class="info__card">
+            <h3>📶 Internet <span class="jp">ネット</span></h3>
+            <p>
+              Use eSIM/SIM or pocket Wi-Fi. Coverage varies by place.
+              <span class="jp">eSIM・SIM・ポケットWi-Fiが便利です。</span>
+            </p>
+            <ul class="list">
+              <li>eSIM for solo trips <span class="jp">一人旅ならeSIM</span></li>
+              <li>Pocket Wi-Fi for groups <span class="jp">グループならWi-Fi</span></li>
+            </ul>
+          </div>
+
+          <div class="info__card">
+            <h3>🆘 Safety <span class="jp">安全</span></h3>
+            <p>
+              Japan is very safe, but keep emergency basics ready.
+              <span class="jp">安全ですが、緊急時の準備は大切です。</span>
+            </p>
+            <ul class="list">
+              <li>110 Police / 119 Fire-Ambulance <span class="jp">警察110 / 救急119</span></li>
+              <li>Save hotel address & station name <span class="jp">ホテル住所を保存</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section" id="tips">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Travel Tips</h2>
+            <span class="jp section__jp">旅行のコツ</span>
+          </div>
+          <p class="section__desc">
+            Practical tips to make your trip smoother.
+            <span class="jp">旅をもっと快適にするポイント。</span>
+          </p>
+        </div>
+
+        <div class="tips">
+          <div class="tip">
+            <span class="tip__icon">📶</span>
+            <div>
+              <h3>SIM / Pocket Wi-Fi <span class="jp">SIM・ポケットWi-Fi</span></h3>
+              <p>
+                Buy at airport or book online. Pocket Wi-Fi is great for groups.
+                <span class="jp">空港またはオンライン予約がおすすめ。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip">
+            <span class="tip__icon">🧳</span>
+            <div>
+              <h3>Luggage Delivery <span class="jp">荷物配送</span></h3>
+              <p>
+                Use takkyubin to send bags between hotels — super convenient.
+                <span class="jp">宅配便でホテル間配送が便利です。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip">
+            <span class="tip__icon">🍣</span>
+            <div>
+              <h3>Food Adventures <span class="jp">食の冒険</span></h3>
+              <p>
+                Try local markets and small shops — many have picture menus.
+                <span class="jp">市場や小さなお店もおすすめ。写真メニューも多いです。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip">
+            <span class="tip__icon">🚯</span>
+            <div>
+              <h3>Trash & Recycling <span class="jp">ゴミ</span></h3>
+              <p>
+                Public bins are rare — carry a small bag.
+                <span class="jp">ゴミ箱が少ないので袋を持つと便利。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip">
+            <span class="tip__icon">🎫</span>
+            <div>
+              <h3>Reservations <span class="jp">予約</span></h3>
+              <p>
+                Popular restaurants and attractions may require booking.
+                <span class="jp">人気店は予約が必要な場合があります。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip">
+            <span class="tip__icon">🛁</span>
+            <div>
+              <h3>Onsen Basics <span class="jp">温泉</span></h3>
+              <p>
+                Wash before entering; tattoos may be restricted in some places.
+                <span class="jp">入浴前に体を洗い、タトゥー制限も確認。</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Contact</h2>
+            <span class="jp section__jp">お問い合わせ</span>
+          </div>
+          <p class="section__desc">
+            Ask a question or send feedback.
+            <span class="jp">質問やフィードバックを送ってください。</span>
+          </p>
+        </div>
+
+        <div class="contact">
+          <form class="form" id="contactForm" novalidate>
+            <div class="form__row">
+              <label class="form__label" for="name">Name <span class="jp">お名前</span></label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required />
+              <small class="form__error" data-error-for="name"></small>
+            </div>
+
+            <div class="form__row">
+              <label class="form__label" for="email">Email <span class="jp">メール</span></label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com" required />
+              <small class="form__error" data-error-for="email"></small>
+            </div>
+
+            <div class="form__row">
+              <label class="form__label" for="message">Message <span class="jp">メッセージ</span></label>
+              <textarea
+                class="form__input form__textarea"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us what you need..."
+                required
+              ></textarea>
+              <small class="form__error" data-error-for="message"></small>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary btn--submit" type="submit">Send Message</button>
+              <p class="form__hint" id="formHint" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <aside class="contact__side">
+            <div class="sidecard">
+              <h3>
+                Need quick help?
+                <span class="jp">すぐに知りたい？</span>
+              </h3>
+              <p>
+                Use the “Details” buttons in <b>Top Spots</b> to view address, hours, and access.
+                <span class="jp">「Details」ボタンで住所・営業時間・アクセスを確認できます。</span>
+              </p>
+              <div class="sidecard__pill">
+                <span>✅ Responsive</span><span>✅ Clean layout</span><span>✅ Smooth scroll</span>
+              </div>
+            </div>
+
+            <div class="sidecard sidecard--mini">
+              <h3>
+                Suggested Theme
+                <span class="jp">テーマ</span>
+              </h3>
+              <p class="jp">「日本の観光案内」— City highlights, culture, and helpful travel info.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Japan Tourists Guide • Built with Lakshitha Sandaruwan（ラクシタ　サンダルワン）</p>
+        <a class="footer__top" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Spot details">
+    <div class="modal__overlay" data-close="true"></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+      <h3 class="modal__title" id="modalTitle"></h3>
+
+      <div class="modal__content">
+        <div class="modal__item">
+          <span class="modal__label">Address</span>
+          <p id="modalAddress"></p>
+        </div>
+        <div class="modal__item">
+          <span class="modal__label">Hours</span>
+          <p id="modalHours"></p>
+        </div>
+        <div class="modal__item">
+          <span class="modal__label">Access</span>
+          <p id="modalAccess"></p>
+        </div>
+        <div class="modal__note" id="modalNote"></div>
+      </div>
+
+      <div class="modal__actions">
+        <a class="btn btn--outline" id="modalMaps" href="#" target="_blank" rel="noreferrer">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

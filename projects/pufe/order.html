@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve | 24:15 Midnight Parfait</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="order-page">
+  <header class="order-hero">
+    <nav class="navbar">
+      <a class="logo logo-link" href="index.html">24:15</a>
+      <div class="nav-links order-nav">
+        <a href="index.html#menu">Menu</a>
+        <a href="index.html#location">Location</a>
+        <span class="status-pill">● OPEN</span>
+      </div>
+    </nav>
+
+    <div class="order-hero-copy">
+      <p class="hero-tag">MIDNIGHT RESERVATION</p>
+      <h1>Reserve your<br>night parfait.</h1>
+      <p>今夜のパフェを取り置きできます。受け取り時間と連絡先を入力してください。</p>
+    </div>
+  </header>
+
+  <main class="order-main">
+    <section class="order-shell">
+      <form class="order-form" id="orderForm">
+        <div class="form-heading">
+          <p class="small-title">ORDER DETAILS</p>
+          <h2>Tonight's Order</h2>
+        </div>
+
+        <label>
+          Parfait
+          <select id="product" name="product" required>
+            <option value="苺とピスタチオの夜更かしパフェ">苺とピスタチオの夜更かしパフェ</option>
+            <option value="月夜のイチジクとキャラメル">月夜のイチジクとキャラメル</option>
+            <option value="桜舞う、春の夜の夢">桜舞う、春の夜の夢</option>
+          </select>
+        </label>
+
+        <div class="form-grid">
+          <label>
+            Quantity
+            <input id="quantity" name="quantity" type="number" min="1" max="9" value="1" required />
+          </label>
+
+          <label>
+            Pickup Time
+            <input id="pickupTime" name="pickupTime" type="time" value="00:30" required />
+          </label>
+        </div>
+
+        <label>
+          Name
+          <input id="customerName" name="customerName" type="text" placeholder="Your name" required />
+        </label>
+
+        <label>
+          Phone / SNS ID
+          <input id="contactInfo" name="contactInfo" type="text" placeholder="Phone number or Instagram ID" required />
+        </label>
+
+        <label>
+          Notes
+          <textarea id="notes" name="notes" rows="4" placeholder="Allergy, pickup note, etc."></textarea>
+        </label>
+
+        <button class="submit-order" type="submit">Create Order Message</button>
+      </form>
+
+      <aside class="order-card" aria-live="polite">
+        <p class="small-title">CONFIRMATION</p>
+        <h2 id="orderTitle">Ready to reserve</h2>
+        <p id="orderIntro">フォームを入力すると、予約内容のメッセージがここに表示されます。</p>
+
+        <div class="order-summary" id="orderSummary">
+          <span>24:15</span>
+          <strong>Tonight's Location</strong>
+          <p>Yushima, Bunkyo-ku<br>Open 24:15 - Late</p>
+        </div>
+
+        <div class="order-actions">
+          <button type="button" id="copyOrderBtn" disabled>Copy Message</button>
+          <a href="tel:0312345678">Call Shop</a>
+          <a href="index.html#location">Open Map</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="order.js"></script>
+</body>
+</html>

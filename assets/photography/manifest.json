@@ -1,0 +1,409 @@
+{
+  "photography": [
+    {
+      "id": "akihabara-night-car",
+      "title": "Akihabara After Dark",
+      "description": "Night street photography featuring a silver modified car, warm storefront light and cool reflections in Akihabara.",
+      "source_post_url": "https://www.facebook.com/photo/?fbid=2328468067907571&set=pcb.2328468171240894",
+      "user_authorship_asserted": true,
+      "original": {
+        "path": "assets/photography/akihabara-night-car.jpg",
+        "width": 3071,
+        "height": 4096,
+        "bytes": 775061,
+        "sha256": "8283e0dfa5e2d0f8d95d76cf8587bddbc844c805f6a1e43a9e6c72eaa75a83b7"
+      },
+      "preview": {
+        "path": "assets/previews/photography/akihabara-night-car.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 160754
+      },
+      "thumbnail": {
+        "path": "assets/previews/photography/akihabara-night-car-thumb.webp",
+        "width": 675,
+        "height": 900,
+        "bytes": 64154
+      }
+    },
+    {
+      "id": "tokyo-portraits",
+      "title": "Tokyo — Portrait Session",
+      "subtitle": "Portrait & couples photography",
+      "description": "A portrait session presented through soft light, close compositions and coordinated photographic collages.",
+      "source_post_url": "https://www.facebook.com/story.php?story_fbid=2327469884674056&id=100022332010934",
+      "user_authorship_asserted": true,
+      "source_resolution_note": "These selected public post previews were available at 443×590 pixels and are retained without upscaling.",
+      "original": {
+        "path": "assets/photography/tokyo-portraits/01.jpg",
+        "width": 443,
+        "height": 590,
+        "bytes": 34295,
+        "sha256": "36f3e4118cfe6b6c17180571f01e87655dcb415a0d2a08ec3b84630943085c1d"
+      },
+      "preview": {
+        "path": "assets/previews/photography/tokyo-portraits/01.webp",
+        "width": 443,
+        "height": 590,
+        "bytes": 28708
+      },
+      "thumbnail": {
+        "path": "assets/previews/photography/tokyo-portraits/01-thumb.webp",
+        "width": 443,
+        "height": 590,
+        "bytes": 26978
+      },
+      "images": [
+        {
+          "label": "Portrait composition",
+          "original": {
+            "path": "assets/photography/tokyo-portraits/01.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 34295,
+            "sha256": "36f3e4118cfe6b6c17180571f01e87655dcb415a0d2a08ec3b84630943085c1d"
+          },
+          "preview": {
+            "path": "assets/previews/photography/tokyo-portraits/01.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 28708
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/tokyo-portraits/01-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 26978
+          }
+        },
+        {
+          "label": "Portrait detail",
+          "original": {
+            "path": "assets/photography/tokyo-portraits/02.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 18084,
+            "sha256": "d7bd08ef12a5b3e00fb4fc8a9532ce33fca7f4511aab134154e592aa16963c79"
+          },
+          "preview": {
+            "path": "assets/previews/photography/tokyo-portraits/02.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 11326
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/tokyo-portraits/02-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 10202
+          }
+        },
+        {
+          "label": "Session collage",
+          "original": {
+            "path": "assets/photography/tokyo-portraits/03.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 27919,
+            "sha256": "382876e34f3301e51fd96d4ab974c7f3773f81a83a8e34a432be17906edcc1e9"
+          },
+          "preview": {
+            "path": "assets/previews/photography/tokyo-portraits/03.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 19444
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/tokyo-portraits/03-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 18050
+          }
+        }
+      ]
+    },
+    {
+      "id": "asakusa-portraits",
+      "title": "Asakusa — Timeless Portraits",
+      "subtitle": "Portrait & cultural photography",
+      "description": "Portraits framed by traditional dress, temple architecture and the colors of Asakusa.",
+      "source_post_url": "https://www.facebook.com/story.php?story_fbid=2312932809461097&id=100022332010934",
+      "source_share_url": "https://www.facebook.com/share/p/18KYxpyxuD/?mibextid=wwXIfr",
+      "user_authorship_asserted": true,
+      "source_resolution_note": "Selected public post image previews are retained at their downloaded resolution without upscaling; dimensions are recorded per image.",
+      "original": {
+        "path": "assets/photography/asakusa-portraits/01.jpg",
+        "width": 443,
+        "height": 590,
+        "bytes": 40778,
+        "sha256": "0bbe540668d77c9c8214d468e77c70af6ca6e50069991a3f1248a450d203fae6"
+      },
+      "preview": {
+        "path": "assets/previews/photography/asakusa-portraits/01.webp",
+        "width": 443,
+        "height": 590,
+        "bytes": 31846
+      },
+      "thumbnail": {
+        "path": "assets/previews/photography/asakusa-portraits/01-thumb.webp",
+        "width": 443,
+        "height": 590,
+        "bytes": 29968
+      },
+      "images": [
+        {
+          "label": "Temple steps portrait",
+          "original": {
+            "path": "assets/photography/asakusa-portraits/01.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 40778,
+            "sha256": "0bbe540668d77c9c8214d468e77c70af6ca6e50069991a3f1248a450d203fae6"
+          },
+          "preview": {
+            "path": "assets/previews/photography/asakusa-portraits/01.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 31846
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/asakusa-portraits/01-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 29968
+          }
+        },
+        {
+          "label": "Architectural portrait",
+          "original": {
+            "path": "assets/photography/asakusa-portraits/02.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 43453,
+            "sha256": "e20cb9993ed3f85694c8d8a5c14573f7e4edc74fd9eb76f978c22f220dc28fee"
+          },
+          "preview": {
+            "path": "assets/previews/photography/asakusa-portraits/02.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 39924
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/asakusa-portraits/02-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 36258
+          }
+        },
+        {
+          "label": "Close portrait",
+          "original": {
+            "path": "assets/photography/asakusa-portraits/03.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 26990,
+            "sha256": "97648ef4094d718b73b80be22318aa91188bd888a6d698bf3937222214a3b40f"
+          },
+          "preview": {
+            "path": "assets/previews/photography/asakusa-portraits/03.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 20494
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/asakusa-portraits/03-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 18924
+          }
+        },
+        {
+          "label": "Lantern portrait",
+          "original": {
+            "path": "assets/photography/asakusa-portraits/04.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 34189,
+            "sha256": "2860ec96dd9cc0108d2b71aa41ebe4ef515f9d179e279d3ef0f169081dabd881"
+          },
+          "preview": {
+            "path": "assets/previews/photography/asakusa-portraits/04.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 26876
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/asakusa-portraits/04-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 24588
+          }
+        },
+        {
+          "label": "Temple approach portrait",
+          "original": {
+            "path": "assets/photography/asakusa-portraits/05.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 33374,
+            "sha256": "c4cada9d1854f0a1a578b55bc9a4c99a18712a54196e7c76c2465292534826c6"
+          },
+          "preview": {
+            "path": "assets/previews/photography/asakusa-portraits/05.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 26704
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/asakusa-portraits/05-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 24698
+          }
+        }
+      ]
+    },
+    {
+      "id": "shinjuku-nights",
+      "title": "Shinjuku — Neon Nights",
+      "subtitle": "Street & cinematic photography",
+      "description": "Street portraits exploring neon signs, warm lanterns and contrasting night light in Shinjuku.",
+      "source_post_url": "https://www.facebook.com/story.php?story_fbid=2298783707542674&id=100022332010934",
+      "source_share_url": "https://www.facebook.com/share/p/1F9YaUytx1/?mibextid=wwXIfr",
+      "user_authorship_asserted": true,
+      "source_resolution_note": "Selected public post image previews are retained at their downloaded resolution without upscaling; dimensions are recorded per image.",
+      "original": {
+        "path": "assets/photography/shinjuku-nights/01.jpg",
+        "width": 443,
+        "height": 590,
+        "bytes": 52760,
+        "sha256": "01d45bf4f5e47211bca178870da701b0ead37545c9b718ef1c8d5ae4aac26ccc"
+      },
+      "preview": {
+        "path": "assets/previews/photography/shinjuku-nights/01.webp",
+        "width": 443,
+        "height": 590,
+        "bytes": 45442
+      },
+      "thumbnail": {
+        "path": "assets/previews/photography/shinjuku-nights/01-thumb.webp",
+        "width": 443,
+        "height": 590,
+        "bytes": 42020
+      },
+      "images": [
+        {
+          "label": "Neon street portrait",
+          "original": {
+            "path": "assets/photography/shinjuku-nights/01.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 52760,
+            "sha256": "01d45bf4f5e47211bca178870da701b0ead37545c9b718ef1c8d5ae4aac26ccc"
+          },
+          "preview": {
+            "path": "assets/previews/photography/shinjuku-nights/01.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 45442
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/shinjuku-nights/01-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 42020
+          }
+        },
+        {
+          "label": "Lantern-lit portrait",
+          "original": {
+            "path": "assets/photography/shinjuku-nights/02.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 39120,
+            "sha256": "601e700af3279b0facd6b518d27f72d100de11e3a7e16f05c3c6224e1ae8524c"
+          },
+          "preview": {
+            "path": "assets/previews/photography/shinjuku-nights/02.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 33810
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/shinjuku-nights/02-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 31368
+          }
+        },
+        {
+          "label": "Alley portrait",
+          "original": {
+            "path": "assets/photography/shinjuku-nights/03.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 42753,
+            "sha256": "e97c410d6b69b3ceac47a8a28252fcf62dd83aa23305782771a1f1c9b7f17a12"
+          },
+          "preview": {
+            "path": "assets/previews/photography/shinjuku-nights/03.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 35140
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/shinjuku-nights/03-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 32410
+          }
+        },
+        {
+          "label": "Night portrait",
+          "original": {
+            "path": "assets/photography/shinjuku-nights/04.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 35602,
+            "sha256": "f27bc2b6b3bd1a7ce848b8a15f26810aff7691428a11731d11fd48af77e29bed"
+          },
+          "preview": {
+            "path": "assets/previews/photography/shinjuku-nights/04.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 28568
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/shinjuku-nights/04-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 26046
+          }
+        },
+        {
+          "label": "Lantern alley composition",
+          "original": {
+            "path": "assets/photography/shinjuku-nights/05.jpg",
+            "width": 443,
+            "height": 590,
+            "bytes": 38131,
+            "sha256": "da851bd2c94b402dcadcc4475f2a9f486bc3379b730d2d64258af0014def80ea"
+          },
+          "preview": {
+            "path": "assets/previews/photography/shinjuku-nights/05.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 31008
+          },
+          "thumbnail": {
+            "path": "assets/previews/photography/shinjuku-nights/05-thumb.webp",
+            "width": 443,
+            "height": 590,
+            "bytes": 28634
+          }
+        }
+      ]
+    }
+  ],
+  "total_bytes": 2196851
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Your Bag | NOIRÉ</title><link rel="stylesheet" href="style.css"></head>
+<body class="inner-page">
+  <header class="site-header"><button class="menu-toggle" aria-label="Open menu" aria-expanded="false">Menu</button><nav class="main-nav"><a href="index.html">Home</a><a href="collection.html">Collections</a><a href="shop.html">Continue shopping</a></nav><a class="brand" href="index.html">NOIRÉ</a><div class="header-actions"><a href="shop.html">Shop</a><a href="cart.html">Bag <span class="cart-count">0</span></a></div></header>
+  <main class="cart-layout">
+    <img id="cartImage" src="img/midnight oud.png" alt="Selected fragrance">
+    <section class="cart-info reveal"><p class="eyebrow">カート · Your selection</p><h1 id="cartName">Midnight Oud</h1><p id="cartPrice" class="detail-price">¥12,900</p><p class="hero-intro">Luxury fragrance crafted for elegance, mystery and confidence. Presented in our signature NOIRÉ packaging.</p><div class="quantity"><button onclick="decreaseQty()" aria-label="Decrease quantity">−</button><span id="qty">1</span><button onclick="increaseQty()" aria-label="Increase quantity">+</button></div><h2 id="totalPrice">Total · ¥12,900</h2><button class="checkout-button" onclick="goCheckout()">Continue to checkout →</button></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

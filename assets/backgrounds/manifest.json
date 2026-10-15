@@ -1,0 +1,31 @@
+{
+  "backgrounds": [
+    {
+      "id": "portfolio-cinematic",
+      "label": "Original first-year portfolio background",
+      "source": "projects/year1-portfolio/img/copy_F5B8595E-F001-4102-995F-DCD4428D97ED.MOV",
+      "source_bytes": 54743073,
+      "source_duration_seconds": 30.62,
+      "video": {
+        "path": "assets/backgrounds/portfolio-cinematic.mp4",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 30.63,
+        "codec": "H.264 High",
+        "pixel_format": "yuv420p",
+        "frame_rate": "30000/1001",
+        "audio": false,
+        "faststart": true,
+        "bytes": 14320611
+      },
+      "poster": {
+        "path": "assets/backgrounds/portfolio-cinematic.webp",
+        "width": 1920,
+        "height": 1080,
+        "source_timestamp_seconds": 15,
+        "bytes": 142628
+      },
+      "original_preserved": true
+    }
+  ]
+}

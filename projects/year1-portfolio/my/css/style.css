@@ -1,0 +1,134 @@
+:root{
+  --bg:#0b0b0e;
+  --text:#f3f3f3;
+  --muted: rgba(255,255,255,.75);
+  --card: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.12);
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:"Montserrat", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container{
+  width:min(1100px, 92%);
+  margin:0 auto;
+}
+
+.header{
+  position: sticky;
+  top:0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.55);
+  border-bottom:1px solid var(--border);
+}
+.header-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.logo{
+  color: var(--text);
+  text-decoration:none;
+  font-weight:700;
+}
+.brand h1{ margin:0; font-size:16px; letter-spacing:.06em; }
+.brand p{ margin:4px 0 0; color: var(--muted); font-size:12px; }
+
+.hero{ padding:40px 0 10px; }
+.hero h2{ margin:0 0 10px; }
+.hero p{ margin:0; color: var(--muted); line-height:1.7; }
+
+.section{ padding:36px 0; }
+.title{ margin:0 0 16px; letter-spacing:.08em; }
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:18px;
+}
+
+.card{
+  border:1px solid var(--border);
+  background: var(--card);
+  border-radius:14px;
+  padding:12px;
+}
+
+/* ✅ ORIGINAL RATIO FIX */
+.card img{
+  width:100%;
+  height:auto;
+  object-fit:contain;   /* crop නැහැ */
+  display:block;
+  border-radius:12px;
+  background: rgba(255,255,255,.04);
+  padding:8px;
+}
+
+.meta{ padding-top:10px; }
+.name{ font-weight:700; }
+.info{ color: var(--muted); font-size:13px; }
+
+.about{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap:18px;
+  align-items:start;
+}
+.avatar{
+  width:100%;
+  border-radius:14px;
+  height:auto;
+  object-fit:cover;
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.skill{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: var(--card);
+  font-size:13px;
+}
+
+.video{
+  width:100%;
+  aspect-ratio: 16 / 9;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background: #000;
+}
+.video iframe{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.note{ color: var(--muted); font-size:12px; line-height:1.6; margin-top:10px; }
+
+.footer{
+  border-top:1px solid var(--border);
+  padding:18px 0;
+  color: var(--muted);
+  text-align:center;
+}
+
+@media (max-width: 900px){
+  .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px){
+  .grid{ grid-template-columns: 1fr; }
+  .about{ grid-template-columns: 1fr; }
+}

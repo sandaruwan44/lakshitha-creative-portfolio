@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Checkout | NOIRÉ</title><link rel="stylesheet" href="style.css"></head>
+<body class="inner-page">
+  <header class="site-header"><span></span><a class="brand" href="index.html">NOIRÉ</a><div class="header-actions"><a href="cart.html">Return to bag</a></div></header>
+  <main class="checkout-layout">
+    <img id="checkoutImage" src="img/midnight oud.png" alt="Selected fragrance">
+    <section class="checkout-info reveal"><p class="eyebrow">お支払い · Secure checkout</p><h1>Complete<br>your order.</h1><p>Your selection: <strong id="checkoutProduct">Midnight Oud</strong></p><form class="checkout-form" onsubmit="return false"><input type="text" placeholder="Full name" autocomplete="name" required><input type="email" placeholder="Email address" autocomplete="email" required><input type="text" placeholder="Delivery address" autocomplete="street-address" required><input type="text" placeholder="Card number" inputmode="numeric" autocomplete="cc-number" required><button class="checkout-button" type="button" onclick="placeOrder()">Place order →</button></form></section>
+  </main>
+  <div class="toast" role="status" aria-live="polite"></div><script src="script.js"></script>
+</body>
+</html>

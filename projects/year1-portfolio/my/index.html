@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>My Portfolio | Lakshitha Sandaruwan</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="../css/ress.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Works grid + video styles (add-on) -->
+  <style>
+    /* ---------- Base helpers ---------- */
+    .container{ max-width:1100px; margin:0 auto; padding:0 18px; }
+    .section{ padding:48px 0; }
+    .title{ font-size:1.6rem; letter-spacing:.08em; margin-bottom:18px; }
+    .sub{ margin:34px 0 14px; font-size:1.15rem; letter-spacing:.08em; opacity:.75; }
+
+    /* ---------- Portrait Works (same size) ---------- */
+    .grid.portrait{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+    }
+    .grid.portrait .item{
+      position:relative;
+      width:100%;
+      aspect-ratio:3 / 4;      /* ✅ portrait size */
+      overflow:hidden;
+      border-radius:18px;
+      background:#111;
+      box-shadow:0 10px 26px rgba(0,0,0,.12);
+    }
+    .grid.portrait img{
+      width:100%;
+      height:100%;
+      object-fit:cover;        /* ✅ no stretch */
+      display:block;
+      transition:.4s ease;
+    }
+    .grid.portrait .item:hover img{ transform:scale(1.05); }
+
+    /* ---------- Wide Designs (16:9) ---------- */
+    .grid.wide{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:22px;
+    }
+    .grid.wide .item{
+      width:100%;
+      aspect-ratio:16/9;       /* ✅ wide size */
+      overflow:hidden;
+      border-radius:18px;
+      background:#111;
+      box-shadow:0 10px 26px rgba(0,0,0,.12);
+    }
+    .grid.wide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:.4s ease;
+    }
+    .grid.wide .item:hover img{ transform:scale(1.03); }
+
+    /* ---------- Video ---------- */
+    .video{
+      width:100%;
+      max-width:920px;
+      margin:0 auto;
+    }
+    .video video{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:18px;
+      background:#000;
+      box-shadow:0 10px 26px rgba(0,0,0,.12);
+    }
+    .note{ margin-top:10px; opacity:.8; font-size:.95rem; text-align:center; line-height:1.6; }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="logo" href="../index.html">← BACK</a>
+      <div class="brand">
+        <h1>LAKSHITHA SANDARUWAN</h1>
+        <p>Design / Frontend / Photoshop / Illustrator</p>
+      </div>
+    </div>
+  </header>
+
+ <main class="container">
+
+  <section class="hero">
+    <h2>My Portfolio</h2>
+    <p>
+      A collection of my design works including posters, layouts, and visual projects.
+    </p>
+  </section>
+
+    <!-- ================= WORKS ================= -->
+    <section class="section" id="works">
+      <h3 class="title">WORKS</h3>
+
+      <!-- ✅ Portrait posters (same size) -->
+      <h4 class="sub">PORTRAIT WORKS</h4>
+      <div class="grid portrait">
+        <div class="item"><img src="img/portrait_01.jpg" alt="Portrait 01"></div>
+        <div class="item"><img src="img/portrait_02.jpg" alt="Portrait 02"></div>
+        <div class="item"><img src="img/portrait_05.jpg" alt="Portrait 03"></div>
+        <div class="item"><img src="img/portrait_04.jpg" alt="Portrait 04"></div>
+        <div class="item"><img src="img/portrait_03.jpg" alt="Portrait 04"></div>
+      </div>
+
+      <!-- ✅ Wide designs -->
+      <h4 class="sub">WIDE DESIGNS</h4>
+      <div class="grid wide">
+        <div class="item"><img src="img/work_02.jpg" alt="Wide 01"></div>
+        <div class="item"><img src="img/work_03.jpg" alt="Wide 02"></div>
+        <div class="item"><img src="img/work_04.jpg" alt="Wide 02"></div>
+        <div class="item"><img src="img/work_07.jpg" alt="Wide 02"></div>
+        <div class="item"><img src="img/work_08.jpg" alt="Wide 02"></div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <h3 class="title">ABOUT</h3>
+
+      <div class="about">
+        <img class="avatar" src="../img/IMG_0500.JPG" alt="Profile" />
+        <div>
+          <p>
+            こんにちは、私は <strong>Lakshitha Sandaruwan</strong> です。<br />
+            Web開発 / デザイン / Photoshop / Illustrator を学びながら作品を制作しています。
+          </p>
+          <p>
+            学校の課題として、ポートフォリオサイトを作成し、作品をまとめています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <h3 class="title">SKILLS</h3>
+
+      <div class="skills">
+        <div class="skill">HTML / CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Photoshop</div>
+        <div class="skill">Illustrator</div>
+        <div class="skill">After Effects</div>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO ================= -->
+    <section class="section" id="video">
+    <h3 class="title">SRI LANKA TRAVEL VIDEO</h3>
+
+    <div class="video">
+      <video autoplay loop muted playsinline controls>
+        <source src="img/スリランカ ― 遺産とおもてなしの国 🇱🇰(Sri Lanka –The Land of Heritage and Hospitality) - Gaming Mello (1080p, h264).mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <p class="note">
+      スリランカの文化と風景を紹介する、学習用に掲載した映像です。
+    </p>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">©️ Lakshitha Sandaruwan</div>
+  </footer>
+</body>
+</html>

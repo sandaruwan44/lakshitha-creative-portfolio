@@ -1,0 +1,1276 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>44 Sneaker Slider</title>
+  <style>
+    :root {
+      --bg-a: #231229;
+      --bg-b: #a65cdf;
+      --accent: #c27bff;
+      --text: #ffffff;
+      --soft: rgba(255, 255, 255, 0.66);
+      --dim: rgba(255, 255, 255, 0.42);
+      --exit-mid-rotate: -31deg;
+      --exit-mid-x: -44px;
+      --exit-rotate: -68deg;
+      --exit-x: -310px;
+      --exit-far-rotate: -42deg;
+      --exit-far-x: -167px;
+      --enter-rotate: 46deg;
+      --enter-x: 330px;
+      --enter-far-rotate: 21deg;
+      --enter-far-x: 172px;
+      --enter-pop-rotate: -25deg;
+      --enter-pop-x: -34px;
+      --enter-settle-rotate: -14deg;
+      --enter-settle-x: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Trebuchet MS", Arial, ui-sans-serif, system-ui, sans-serif;
+      color: var(--text);
+      background: #1c1021;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 88% 52%, rgba(255, 255, 255, 0.13), transparent 19rem),
+        linear-gradient(115deg, var(--bg-a) 0%, var(--bg-a) 27%, var(--bg-b) 100%);
+      transition: background 560ms ease;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.32), transparent 38%, rgba(255, 255, 255, 0.06)),
+        radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--accent) 44%, transparent), transparent 23rem);
+      transition: opacity 420ms ease;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 9;
+      pointer-events: none;
+      opacity: 0;
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 6px),
+        linear-gradient(90deg, transparent 0 18%, rgba(255, 255, 255, 0.22) 20%, transparent 23% 100%);
+      mix-blend-mode: screen;
+    }
+
+    .motion-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      opacity: 0.52;
+      mix-blend-mode: screen;
+    }
+
+    .topbar {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      width: min(100% - 88px, 1840px);
+      margin: 0 auto;
+      padding: 62px 0 24px;
+      color: rgba(255, 255, 255, 0.88);
+      letter-spacing: 0;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .brand {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(1.65rem, 2.3vw, 2.2rem);
+      letter-spacing: 0.08em;
+      font-weight: 950;
+      line-height: 1;
+    }
+
+    .nav-title {
+      color: rgba(255, 255, 255, 0.58);
+      font-size: clamp(0.82rem, 1.4vw, 1.12rem);
+      white-space: nowrap;
+      font-family: "Courier New", ui-monospace, monospace;
+    }
+
+    .top-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: clamp(22px, 8vw, 360px);
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: rgba(255, 255, 255, 0.78);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-weight: 800;
+      text-transform: lowercase;
+    }
+
+    .socials span {
+      display: grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .cart {
+      font-size: clamp(0.82rem, 1.4vw, 1.1rem);
+      color: rgba(255, 255, 255, 0.74);
+      white-space: nowrap;
+      font-family: "Courier New", ui-monospace, monospace;
+    }
+
+    .slider {
+      position: relative;
+      min-height: calc(100vh - 140px);
+      width: min(100% - 88px, 1840px);
+      margin: 0 auto;
+    }
+
+    .product-title {
+      position: absolute;
+      z-index: 2;
+      top: clamp(220px, 38vh, 350px);
+      left: 50%;
+      width: min(72vw, 900px);
+      margin: 0;
+      translate: -50% -50%;
+      color: white;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(3.8rem, 9.2vw, 7.8rem);
+      line-height: 0.8;
+      letter-spacing: 0.12em;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 950;
+      pointer-events: none;
+      transition: opacity 260ms ease, transform 520ms cubic-bezier(.2, .85, .2, 1);
+    }
+
+    .product-title.front {
+      z-index: 5;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.82);
+      text-stroke: 2px rgba(255, 255, 255, 0.82);
+      mix-blend-mode: screen;
+    }
+
+    .product-title .outline {
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.88);
+      text-stroke: 2px rgba(255, 255, 255, 0.88);
+    }
+
+    .product-title.front .outline {
+      -webkit-text-stroke-color: rgba(255, 255, 255, 0.95);
+      text-stroke-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .shoe-zone {
+      position: absolute;
+      z-index: 4;
+      top: clamp(110px, 14vh, 150px);
+      left: 50%;
+      width: min(74vw, 860px);
+      aspect-ratio: 1.45;
+      translate: -50% 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+
+    .shoe {
+      width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transform: rotate(-19deg) translateY(7%) scale(0.98);
+      filter:
+        drop-shadow(0 18px 12px rgba(12, 6, 14, 0.18))
+        drop-shadow(0 0 30px color-mix(in srgb, var(--accent) 72%, transparent));
+      animation: float 4.2s ease-in-out infinite;
+      transform-origin: 52% 58%;
+      transition: opacity 220ms ease, filter 380ms ease;
+    }
+
+    .shoe.exit {
+      animation: shoeGlitchOut 650ms steps(2, end) both;
+    }
+
+    .shoe.enter {
+      animation: shoeGlitchIn 760ms steps(2, end) both, float 4.2s 760ms ease-in-out infinite;
+    }
+
+    .ground-shadow {
+      position: absolute;
+      z-index: 1;
+      top: clamp(610px, 76vh, 735px);
+      left: 50%;
+      width: min(41vw, 540px);
+      height: 24px;
+      translate: -50% 0;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(0, 0, 0, 0.22), transparent 68%);
+      filter: blur(10px);
+      opacity: 0.48;
+      transition: opacity 280ms ease, transform 460ms ease;
+    }
+
+    .copy {
+      position: absolute;
+      z-index: 5;
+      left: clamp(42px, 18vw, 340px);
+      bottom: clamp(66px, 9vh, 104px);
+      display: grid;
+      gap: 14px;
+      width: min(430px, 40vw);
+      font-family: "Courier New", ui-monospace, monospace;
+    }
+
+    .price {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.55rem);
+      line-height: 1;
+      font-weight: 950;
+      transition: transform 320ms ease, opacity 220ms ease;
+    }
+
+    .stars {
+      color: #ffffff;
+      letter-spacing: 0.08em;
+      font-size: 1.16rem;
+      line-height: 1;
+    }
+
+    .description {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: clamp(0.96rem, 1.35vw, 1.12rem);
+      line-height: 1.62;
+      font-weight: 700;
+      transition: transform 320ms ease, opacity 220ms ease;
+    }
+
+    .buy-now {
+      position: absolute;
+      z-index: 6;
+      right: clamp(150px, 20vw, 390px);
+      bottom: clamp(58px, 9vh, 94px);
+      appearance: none;
+      border: 0;
+      border-bottom: 0;
+      padding: 0 0 15px;
+      background: transparent;
+      color: white;
+      font-family: Impact, "Arial Black", ui-sans-serif, system-ui, sans-serif;
+      font-size: clamp(1.9rem, 2.9vw, 2.45rem);
+      line-height: 1;
+      letter-spacing: 0.1em;
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      cursor: pointer;
+      transform: skewX(-8deg);
+      text-shadow: 3px 0 0 rgba(255, 0, 116, 0.34), -3px 0 0 rgba(0, 238, 255, 0.28);
+    }
+
+    .buy-now::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      right: -6px;
+      bottom: 0;
+      height: 4px;
+      background: currentColor;
+      transform: skewX(-18deg);
+      box-shadow: 12px 0 0 rgba(255, 255, 255, 0.36);
+    }
+
+    .side-arrow {
+      position: absolute;
+      z-index: 8;
+      top: 50%;
+      width: clamp(150px, 16vw, 300px);
+      aspect-ratio: 1;
+      translate: 0 -50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.96);
+      cursor: pointer;
+    }
+
+    .side-arrow::before,
+    .side-arrow::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform-origin: center;
+    }
+
+    .side-arrow::before {
+      width: 78px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .side-arrow::after {
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      background: transparent;
+    }
+
+    .side-arrow.prev {
+      left: min(-105px, -5vw);
+    }
+
+    .side-arrow.prev::before {
+      left: 66px;
+    }
+
+    .side-arrow.prev::after {
+      left: 66px;
+      transform: rotate(-135deg);
+      translate: 0 -50%;
+    }
+
+    .side-arrow.next {
+      right: min(-105px, -5vw);
+    }
+
+    .side-arrow.next::before {
+      right: 66px;
+    }
+
+    .side-arrow.next::after {
+      right: 66px;
+      transform: rotate(45deg);
+      translate: 0 -50%;
+    }
+
+    .dots {
+      position: absolute;
+      z-index: 7;
+      left: 50%;
+      bottom: 30px;
+      translate: -50% 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-strip {
+      position: absolute;
+      z-index: 7;
+      left: clamp(24px, 4vw, 70px);
+      right: clamp(24px, 4vw, 70px);
+      bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: nowrap;
+      color: rgba(255, 255, 255, 0.58);
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: clamp(0.72rem, 1vw, 0.88rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .footer-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .footer-strip span::before {
+      content: "";
+      width: clamp(18px, 2.8vw, 34px);
+      height: 1px;
+      background: rgba(255, 255, 255, 0.36);
+      flex: 0 0 auto;
+    }
+
+    .graffiti-page {
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.92)),
+        url("assets/graffiti-generated-bg.png") center top / cover fixed,
+        #050506;
+      color: #fff;
+      overflow: hidden;
+      font-family: "Trebuchet MS", Arial, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .wall-section {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      align-items: center;
+      padding: clamp(64px, 9vw, 120px) min(8vw, 96px);
+      isolation: isolate;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.68)),
+        url("assets/graffiti-generated-bg.png") center var(--wall-y, 0%) / cover,
+        repeating-linear-gradient(12deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 74px),
+        repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 92px),
+        radial-gradient(circle at 18% 28%, rgba(0, 236, 255, 0.2), transparent 22rem),
+        radial-gradient(circle at 78% 42%, rgba(255, 64, 123, 0.19), transparent 24rem),
+        #08080a;
+    }
+
+    .wall-section::before {
+      content: "44 44 44 44 44 44 44 44";
+      position: absolute;
+      inset: -8% -6%;
+      z-index: -2;
+      color: rgba(255, 255, 255, 0.035);
+      font-family: Impact, "Arial Black", sans-serif;
+      font-size: clamp(5rem, 15vw, 14rem);
+      line-height: 0.9;
+      letter-spacing: 0.06em;
+      transform: rotate(-7deg);
+      word-spacing: 0.3em;
+    }
+
+    .wall-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.84), transparent 38%, rgba(0, 0, 0, 0.72)),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 7px);
+      mix-blend-mode: multiply;
+    }
+
+    .crew-intro {
+      grid-template-columns: minmax(240px, 0.86fr) minmax(280px, 1.1fr);
+      gap: clamp(34px, 6vw, 90px);
+    }
+
+    .graffiti-logo {
+      margin: 0;
+      font-family: Impact, "Arial Black", sans-serif;
+      font-size: clamp(4rem, 13vw, 10rem);
+      line-height: 0.78;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-style: italic;
+      background:
+        linear-gradient(105deg, #fff 0 18%, #00e8ff 20% 34%, #ff4f89 36% 48%, #f7ff6a 50% 64%, #fff 68% 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(6px 6px 0 rgba(255, 0, 116, 0.22)) drop-shadow(-5px -3px 0 rgba(0, 238, 255, 0.2));
+    }
+
+    .tagline {
+      margin: 18px 0 0;
+      font-family: "Courier New", monospace;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      color: rgba(255, 255, 255, 0.74);
+      text-transform: uppercase;
+    }
+
+    .paint-card {
+      position: relative;
+      min-height: 360px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01)),
+        linear-gradient(125deg, rgba(0, 238, 255, 0.26), transparent 30%),
+        linear-gradient(315deg, rgba(255, 64, 123, 0.28), transparent 32%),
+        #0d0d12;
+      box-shadow: 0 34px 80px rgba(0, 0, 0, 0.42);
+      overflow: hidden;
+      transform: rotate(-2deg);
+    }
+
+    .paint-card::before {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      background:
+        linear-gradient(90deg, transparent 0 8%, rgba(255, 255, 255, 0.28) 8% 10%, transparent 10% 18%),
+        repeating-linear-gradient(-14deg, rgba(255, 255, 255, 0.1) 0 2px, transparent 2px 18px);
+      border: 5px solid #ff4f89;
+      box-shadow: 18px 18px 0 rgba(0, 238, 255, 0.5), -18px -14px 0 rgba(247, 255, 106, 0.42);
+    }
+
+    .paint-card img {
+      position: absolute;
+      width: min(82%, 620px);
+      left: 10%;
+      bottom: 4%;
+      filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.45));
+    }
+
+    .about-copy {
+      max-width: 520px;
+    }
+
+    .kicker {
+      color: #00e8ff;
+      font-family: "Courier New", monospace;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .about-copy h2,
+    .join h2 {
+      margin: 12px 0 18px;
+      font-family: Impact, "Arial Black", sans-serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      font-style: italic;
+      text-transform: uppercase;
+      text-shadow: 4px 0 0 rgba(255, 0, 116, 0.42), -4px 0 0 rgba(0, 238, 255, 0.36);
+    }
+
+    .about-copy p,
+    .join p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.68);
+      line-height: 1.75;
+      font-size: clamp(0.96rem, 1.4vw, 1.12rem);
+      max-width: 620px;
+    }
+
+    .gallery-wall {
+      min-height: 720px;
+      place-items: center;
+      text-align: center;
+      --wall-y: 52%;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.68)),
+        url("assets/graffiti-generated-bg.png") center 62% / cover,
+        linear-gradient(120deg, rgba(0, 232, 255, 0.28), transparent 28%),
+        linear-gradient(300deg, rgba(255, 79, 137, 0.22), transparent 32%),
+        repeating-linear-gradient(24deg, rgba(255, 255, 255, 0.065) 0 2px, transparent 2px 74px),
+        #111116;
+    }
+
+    .gallery-wall h2 {
+      margin: 0;
+      font-family: Impact, "Arial Black", sans-serif;
+      font-size: clamp(3rem, 9vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: 0.03em;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    .gallery-wall p {
+      margin: 20px auto 0;
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.7;
+    }
+
+    .shoe-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: clamp(12px, 2vw, 28px);
+      width: min(100%, 980px);
+      margin-top: 42px;
+    }
+
+    .shoe-tile {
+      min-height: 150px;
+      display: grid;
+      place-items: center;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 10px 10px 0 rgba(255, 79, 137, 0.38);
+      transform: rotate(var(--tilt));
+    }
+
+    .shoe-tile img {
+      width: 118%;
+      max-width: 260px;
+      filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.36));
+    }
+
+    .join {
+      min-height: 460px;
+      place-items: center;
+      text-align: center;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.9)),
+        url("assets/graffiti-generated-bg.png") center bottom / cover,
+        radial-gradient(circle at 50% 0%, rgba(255, 79, 137, 0.34), transparent 22rem),
+        #050506;
+    }
+
+    .join button {
+      margin-top: 28px;
+      border: 0;
+      border-bottom: 3px solid #fff;
+      background: #fff;
+      color: #111;
+      padding: 11px 28px 9px;
+      font-family: Impact, "Arial Black", sans-serif;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      font-size: 1.1rem;
+      transform: skewX(-8deg);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.38);
+      cursor: pointer;
+      padding: 0;
+      transition: width 220ms ease, background 220ms ease;
+    }
+
+    .dot[aria-pressed="true"] {
+      width: 34px;
+      background: white;
+    }
+
+    .is-changing .product-title,
+    .is-changing .price,
+    .is-changing .description {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .is-changing .product-title.front {
+      opacity: 0;
+      animation: textGlitch 620ms steps(2, end) both;
+      transform: translateY(-18px) scale(1.04);
+    }
+
+    .is-changing::after {
+      animation: screenGlitch 650ms steps(2, end) both;
+    }
+
+    .is-changing .ground-shadow {
+      opacity: 0.16;
+      transform: translateX(var(--exit-far-x)) scaleX(0.42);
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        translate: 0 0;
+      }
+      50% {
+        translate: 0 -18px;
+      }
+    }
+
+    @keyframes shoeExit {
+      0% {
+        opacity: 1;
+        transform: rotate(-19deg) translateX(0) translateY(7%) scale(0.98);
+        filter: drop-shadow(0 42px 24px rgba(12, 6, 14, 0.5)) blur(0);
+      }
+      42% {
+        opacity: 1;
+        transform: rotate(var(--exit-mid-rotate)) translateX(var(--exit-mid-x)) translateY(-3%) scale(1.08);
+        filter: drop-shadow(0 54px 28px rgba(12, 6, 14, 0.55)) blur(0);
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(var(--exit-rotate)) translateX(var(--exit-x)) translateY(20%) scale(0.48);
+        filter: drop-shadow(0 22px 16px rgba(12, 6, 14, 0.22)) blur(8px);
+      }
+    }
+
+    @keyframes shoeEnter {
+      0% {
+        opacity: 0;
+        transform: rotate(var(--enter-rotate)) translateX(var(--enter-x)) translateY(20%) scale(0.46);
+        filter: drop-shadow(0 16px 14px rgba(12, 6, 14, 0.18)) blur(8px);
+      }
+      54% {
+        opacity: 1;
+        transform: rotate(var(--enter-pop-rotate)) translateX(var(--enter-pop-x)) translateY(1%) scale(1.12);
+        filter: drop-shadow(0 42px 24px rgba(12, 6, 14, 0.5)) blur(0);
+      }
+      78% {
+        transform: rotate(var(--enter-settle-rotate)) translateX(var(--enter-settle-x)) translateY(8%) scale(0.96);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(-19deg) translateX(0) translateY(7%) scale(0.98);
+        filter: drop-shadow(0 42px 24px rgba(12, 6, 14, 0.5)) blur(0);
+      }
+    }
+
+    @keyframes shoeGlitchOut {
+      0% {
+        opacity: 1;
+        transform: rotate(-19deg) translateX(0) translateY(7%) scale(0.98);
+        filter: drop-shadow(0 24px 16px rgba(12, 6, 14, 0.24)) blur(0) saturate(1);
+        clip-path: inset(0 0 0 0);
+      }
+      10% {
+        transform: rotate(-16deg) translateX(34px) translateY(6%) scale(1.04);
+        filter: drop-shadow(32px 0 0 rgba(0, 238, 255, 0.55)) drop-shadow(-28px 0 0 rgba(255, 0, 116, 0.5)) blur(0) saturate(1.75);
+        clip-path: inset(0 0 72% 0);
+      }
+      20% {
+        transform: rotate(-22deg) translateX(var(--exit-mid-x)) translateY(7%) scale(1.08);
+        filter: drop-shadow(-38px 0 0 rgba(0, 238, 255, 0.46)) drop-shadow(38px 0 0 rgba(255, 0, 116, 0.42)) blur(1px) saturate(2);
+        clip-path: inset(34% 0 28% 0);
+      }
+      34% {
+        opacity: 0.9;
+        transform: rotate(var(--exit-far-rotate)) translateX(var(--exit-far-x)) translateY(7%) scale(0.82);
+        filter: drop-shadow(44px 0 0 rgba(0, 238, 255, 0.32)) drop-shadow(-44px 0 0 rgba(255, 0, 116, 0.32)) blur(3px) contrast(1.45);
+        clip-path: inset(68% 0 4% 0);
+      }
+      52% {
+        opacity: 0.64;
+        transform: rotate(var(--exit-far-rotate)) translateX(var(--exit-x)) translateY(7%) scale(0.62);
+        filter: blur(6px) saturate(1.35);
+        clip-path: inset(8% 0 70% 0);
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(var(--exit-rotate)) translateX(var(--exit-x)) translateY(8%) scale(0.42);
+        filter: blur(12px) saturate(0.7);
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    @keyframes shoeGlitchIn {
+      0% {
+        opacity: 0;
+        transform: rotate(var(--enter-rotate)) translateX(var(--enter-x)) translateY(8%) scale(0.42);
+        filter: drop-shadow(42px 0 0 rgba(0, 238, 255, 0.46)) drop-shadow(-42px 0 0 rgba(255, 0, 116, 0.42)) blur(10px);
+        clip-path: inset(0 0 76% 0);
+      }
+      14% {
+        opacity: 0.88;
+        transform: rotate(var(--enter-far-rotate)) translateX(var(--enter-far-x)) translateY(6%) scale(1.14);
+        filter: drop-shadow(-48px 0 0 rgba(0, 238, 255, 0.48)) drop-shadow(48px 0 0 rgba(255, 0, 116, 0.44)) blur(2px) saturate(1.9);
+        clip-path: inset(32% 0 34% 0);
+      }
+      28% {
+        opacity: 1;
+        transform: rotate(var(--enter-pop-rotate)) translateX(var(--enter-pop-x)) translateY(6%) scale(1.13);
+        filter: drop-shadow(36px 0 0 rgba(0, 238, 255, 0.3)) drop-shadow(-36px 0 0 rgba(255, 0, 116, 0.3)) blur(0) contrast(1.28);
+        clip-path: inset(0 0 0 0);
+      }
+      58% {
+        transform: rotate(var(--enter-settle-rotate)) translateX(var(--enter-settle-x)) translateY(7%) scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(-19deg) translateX(0) translateY(7%) scale(0.98);
+        filter: drop-shadow(0 24px 16px rgba(12, 6, 14, 0.24)) drop-shadow(0 0 30px color-mix(in srgb, var(--accent) 72%, transparent));
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    @keyframes textGlitch {
+      0%, 100% {
+        opacity: 0;
+        filter: none;
+        clip-path: inset(0 0 0 0);
+      }
+      12% {
+        opacity: 0.96;
+        translate: -18px 0;
+        filter: drop-shadow(12px 0 0 rgba(0, 238, 255, 0.55)) drop-shadow(-12px 0 0 rgba(255, 0, 116, 0.55));
+        clip-path: inset(0 0 64% 0);
+      }
+      34% {
+        opacity: 0.8;
+        translate: 20px 0;
+        clip-path: inset(44% 0 24% 0);
+      }
+      58% {
+        opacity: 0.72;
+        translate: -8px 0;
+        filter: drop-shadow(-16px 0 0 rgba(0, 238, 255, 0.45)) drop-shadow(16px 0 0 rgba(255, 0, 116, 0.45));
+        clip-path: inset(72% 0 0 0);
+      }
+    }
+
+    @keyframes screenGlitch {
+      0%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+      }
+      14% {
+        opacity: 0.7;
+        transform: translateX(-18px);
+      }
+      30% {
+        opacity: 0.24;
+        transform: translateX(28px);
+      }
+      52% {
+        opacity: 0.46;
+        transform: translateX(-8px);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .topbar {
+        width: min(100% - 32px, 1840px);
+        grid-template-columns: 1fr auto;
+        padding-top: 28px;
+      }
+
+      .nav-title,
+      .socials {
+        display: none;
+      }
+
+      .slider {
+        width: min(100% - 32px, 1840px);
+        min-height: calc(100vh - 94px);
+      }
+
+      .product-title {
+        top: 31vh;
+        width: 100%;
+        font-size: clamp(3.2rem, 18vw, 8rem);
+        letter-spacing: 0.06em;
+      }
+
+      .shoe-zone {
+        top: 12vh;
+        width: min(88vw, 720px);
+      }
+
+      .copy {
+        left: 0;
+        bottom: 92px;
+        width: min(92vw, 430px);
+      }
+
+      .crew-intro {
+        grid-template-columns: 1fr;
+      }
+
+      .shoe-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .buy-now {
+        right: 0;
+        bottom: 44px;
+      }
+
+      .side-arrow {
+        width: 108px;
+      }
+
+      .side-arrow.prev {
+        left: -72px;
+      }
+
+      .side-arrow.next {
+        right: -72px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        min-height: 760px;
+      }
+
+      .slider {
+        min-height: 660px;
+      }
+
+      .cart {
+        font-size: 0.9rem;
+      }
+
+      .product-title {
+        top: 260px;
+      }
+
+      .shoe-zone {
+        top: 122px;
+        width: min(96vw, 470px);
+      }
+
+      .ground-shadow {
+        top: 440px;
+        width: 78vw;
+      }
+
+      .copy {
+        bottom: 104px;
+      }
+
+      .buy-now {
+        left: 0;
+        right: auto;
+        bottom: 34px;
+        font-size: 1.55rem;
+      }
+
+      .dots {
+        bottom: 24px;
+      }
+
+      .footer-strip {
+        left: 14px;
+        right: 14px;
+        bottom: 10px;
+        font-size: 0.62rem;
+        gap: 8px;
+      }
+
+      .footer-strip span:nth-child(2) {
+        display: none;
+      }
+
+      .wall-section {
+        min-height: auto;
+        padding: 58px 18px;
+      }
+
+      .paint-card {
+        min-height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero" id="hero">
+    <canvas class="motion-bg" id="motionBg" aria-hidden="true"></canvas>
+    <header class="topbar" aria-label="Main navigation">
+      <div class="brand">44</div>
+      <div class="nav-title">WOOCOMMERCE PRODUCT SLIDER</div>
+      <div class="top-right">
+        <div class="socials" aria-label="Social links">
+          <span>f</span>
+          <span>ig</span>
+          <span>o</span>
+        </div>
+        <div class="cart" id="cart">CART (0)</div>
+      </div>
+    </header>
+
+    <section class="slider" aria-label="Sneaker product slider">
+      <button class="side-arrow prev" id="previous" type="button" aria-label="Previous shoe"></button>
+      <button class="side-arrow next" id="next" type="button" aria-label="Next shoe"></button>
+
+      <h1 class="product-title back" id="titleBack">IMPERIAL</h1>
+      <h1 class="product-title front" id="titleFront">IMPERIAL</h1>
+
+      <div class="shoe-zone">
+        <img class="shoe" id="shoe" src="assets/shoe-imperial-purple.png" alt="Imperial Purple sneaker" />
+      </div>
+      <div class="ground-shadow" aria-hidden="true"></div>
+
+      <div class="copy" aria-live="polite">
+        <p class="price" id="price">&#165;34,650</p>
+        <div class="stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="description" id="description">Your next product gallery slider for WooCommerce.</p>
+      </div>
+
+      <button class="buy-now" id="buy" type="button">BUY NOW</button>
+      <div class="dots" id="dots" aria-label="Choose shoe"></div>
+      <footer class="footer-strip" aria-label="Slider footer">
+        <span>limited drop</span>
+        <span>premium motion slider</span>
+        <span>created by sandaruwan</span>
+      </footer>
+    </section>
+  </main>
+
+  <section class="graffiti-page" aria-label="Graffiti inspired sneaker content">
+    <section class="wall-section crew-intro">
+      <div>
+        <h2 class="graffiti-logo">44</h2>
+        <p class="tagline">sneaker motion crew</p>
+      </div>
+      <div class="paint-card">
+        <img src="assets/shoe-brick-after-brick.png" alt="Brick After Brick sneaker artwork" />
+      </div>
+    </section>
+
+    <section class="wall-section crew-intro">
+      <div class="paint-card">
+        <img src="assets/shoe-luka-lifestyle.png" alt="Luka Lifestyle sneaker artwork" />
+      </div>
+      <div class="about-copy">
+        <span class="kicker">about</span>
+        <h2>Street Color</h2>
+        <p>Dark wall texture, neon paint energy, and product motion built around the sneaker slider. The lower page keeps the same purple, cyan, red, and white color rhythm from the hero.</p>
+      </div>
+    </section>
+
+    <section class="wall-section gallery-wall">
+      <div>
+        <span class="kicker">gallery</span>
+        <h2>Drop Wall</h2>
+        <p>Each shoe keeps the clean product focus, while the page below moves into a graffiti crew style like the reference image.</p>
+        <div class="shoe-strip">
+          <div class="shoe-tile" style="--tilt: -3deg"><img src="assets/shoe-imperial-purple.png" alt="Imperial Purple sneaker" /></div>
+          <div class="shoe-tile" style="--tilt: 2deg"><img src="assets/shoe-brick-after-brick.png" alt="Brick After Brick sneaker" /></div>
+          <div class="shoe-tile" style="--tilt: -2deg"><img src="assets/shoe-low-at.png" alt="LOW A/T sneaker" /></div>
+          <div class="shoe-tile" style="--tilt: 3deg"><img src="assets/shoe-luka-lifestyle.png" alt="Luka Lifestyle sneaker" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wall-section join">
+      <div>
+        <h2>Join 44</h2>
+        <p>Created by Sandaruwan. Built for a dark sneaker showcase with glitch motion, graffiti color, and a cleaner hero layout.</p>
+        <button type="button">Join now</button>
+      </div>
+    </section>
+  </section>
+
+  <script>
+    const products = [
+      {
+        title: 'IMPERIAL',
+        outlineAt: 4,
+        price: '\u00a534,650',
+        description: 'Air Jordan 4 Retro "Imperial Purple" inspired men sneaker with deep purple panels and smoky gray sole detail.',
+        image: 'assets/shoe-imperial-purple.png',
+        alt: 'Imperial Purple generated sneaker',
+        bgA: '#231229',
+        bgB: '#a65cdf',
+        accent: '#b678ff'
+      },
+      {
+        title: 'BRICK',
+        outlineAt: 4,
+        price: '\u00a533,550',
+        description: 'Brick After Brick inspired retro court sneaker with warm white leather, brick-red overlays, and cream mesh texture.',
+        image: 'assets/shoe-brick-after-brick.png',
+        alt: 'Brick After Brick generated sneaker',
+        bgA: '#291515',
+        bgB: '#d0584b',
+        accent: '#ff857a'
+      },
+      {
+        title: 'LOW A/T',
+        outlineAt: 4,
+        price: '\u00a525,199',
+        description: 'Air Jordan 1 Element LOW A/T inspired trail sneaker with off-white technical mesh and chunky pale cream tread.',
+        image: 'assets/shoe-low-at.png',
+        alt: 'LOW A/T generated sneaker',
+        bgA: '#18201a',
+        bgB: '#8fa36a',
+        accent: '#e2e6b5'
+      },
+      {
+        title: 'LUKA',
+        outlineAt: 4,
+        price: '\u00a518,480',
+        description: 'Luka 5 "Luka Lifestyle" PF inspired basketball shoe with bright aqua upper, orange wedge, and pale mint midsole.',
+        image: 'assets/shoe-luka-lifestyle.png',
+        alt: 'Luka Lifestyle PF generated sneaker',
+        bgA: '#102338',
+        bgB: '#20b9cd',
+        accent: '#f0a348'
+      }
+    ];
+
+    const hero = document.querySelector('#hero');
+    const titleBack = document.querySelector('#titleBack');
+    const titleFront = document.querySelector('#titleFront');
+    const shoe = document.querySelector('#shoe');
+    const price = document.querySelector('#price');
+    const description = document.querySelector('#description');
+    const previous = document.querySelector('#previous');
+    const next = document.querySelector('#next');
+    const dots = document.querySelector('#dots');
+    const cart = document.querySelector('#cart');
+    const buy = document.querySelector('#buy');
+    const motionBg = document.querySelector('#motionBg');
+    const motionCtx = motionBg.getContext('2d');
+
+    let active = 0;
+    let busy = false;
+    let cartCount = 0;
+
+    function titleMarkup(product) {
+      const i = product.outlineAt;
+      return `${product.title.slice(0, i)}<span class="outline">${product.title.slice(i, i + 1)}</span>${product.title.slice(i + 1)}`;
+    }
+
+    function renderDots() {
+      dots.innerHTML = products.map((product, index) => (
+        `<button class="dot" type="button" data-index="${index}" aria-label="${product.title}" aria-pressed="${index === active}"></button>`
+      )).join('');
+    }
+
+    function paint(index) {
+      const product = products[index];
+      document.documentElement.style.setProperty('--bg-a', product.bgA);
+      document.documentElement.style.setProperty('--bg-b', product.bgB);
+      document.documentElement.style.setProperty('--accent', product.accent);
+      const marked = titleMarkup(product);
+      titleBack.innerHTML = marked;
+      titleFront.innerHTML = product.title;
+      price.textContent = product.price;
+      description.textContent = product.description;
+      shoe.src = product.image;
+      shoe.alt = product.alt;
+      renderDots();
+    }
+
+    function go(index) {
+      if (busy || index === active) return;
+      busy = true;
+      const direction = index > active || (active === products.length - 1 && index === 0) ? 1 : -1;
+      const root = document.documentElement.style;
+      root.setProperty('--exit-mid-rotate', `${-31 * direction}deg`);
+      root.setProperty('--exit-mid-x', `${-44 * direction}px`);
+      root.setProperty('--exit-rotate', `${-68 * direction}deg`);
+      root.setProperty('--exit-x', `${-310 * direction}px`);
+      root.setProperty('--exit-far-rotate', `${-42 * direction}deg`);
+      root.setProperty('--exit-far-x', `${-167 * direction}px`);
+      root.setProperty('--enter-rotate', `${46 * direction}deg`);
+      root.setProperty('--enter-x', `${330 * direction}px`);
+      root.setProperty('--enter-far-rotate', `${21 * direction}deg`);
+      root.setProperty('--enter-far-x', `${172 * direction}px`);
+      root.setProperty('--enter-pop-rotate', `${-25 * direction}deg`);
+      root.setProperty('--enter-pop-x', `${-34 * direction}px`);
+      root.setProperty('--enter-settle-rotate', `${-14 * direction}deg`);
+      root.setProperty('--enter-settle-x', `${14 * direction}px`);
+      hero.classList.add('is-changing');
+      shoe.classList.remove('enter');
+      shoe.classList.add('exit');
+
+      window.setTimeout(() => {
+        active = (index + products.length) % products.length;
+        paint(active);
+        shoe.classList.remove('exit');
+        shoe.classList.add('enter');
+        hero.classList.remove('is-changing');
+      }, 320);
+
+      window.setTimeout(() => {
+        shoe.classList.remove('enter');
+        busy = false;
+      }, 1020);
+    }
+
+    previous.addEventListener('click', () => go(active - 1));
+    next.addEventListener('click', () => go(active + 1));
+    dots.addEventListener('click', (event) => {
+      const dot = event.target.closest('.dot');
+      if (!dot) return;
+      go(Number(dot.dataset.index));
+    });
+    buy.addEventListener('click', () => {
+      cartCount += 1;
+      cart.textContent = `CART (${cartCount})`;
+    });
+
+    function sizeMotionCanvas() {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      motionBg.width = Math.floor(window.innerWidth * ratio);
+      motionBg.height = Math.floor(window.innerHeight * ratio);
+      motionCtx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function drawMotion(time = 0) {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const t = time * 0.00035;
+      motionCtx.clearRect(0, 0, w, h);
+      motionCtx.globalCompositeOperation = 'screen';
+
+      for (let i = 0; i < 12; i += 1) {
+        const y = ((i * 118 + t * 520) % (h + 240)) - 140;
+        const x = (i % 2 === 0 ? -120 : w * 0.38) + Math.sin(t * 2.4 + i) * 90;
+        const grad = motionCtx.createLinearGradient(x, y, x + w * 0.72, y + 110);
+        grad.addColorStop(0, 'rgba(255,255,255,0)');
+        grad.addColorStop(0.48, i % 3 === 0 ? 'rgba(0,238,255,0.16)' : 'rgba(255,255,255,0.11)');
+        grad.addColorStop(0.52, i % 2 === 0 ? 'rgba(255,0,116,0.13)' : 'rgba(255,255,255,0.08)');
+        grad.addColorStop(1, 'rgba(255,255,255,0)');
+        motionCtx.strokeStyle = grad;
+        motionCtx.lineWidth = i % 4 === 0 ? 2 : 1;
+        motionCtx.beginPath();
+        motionCtx.moveTo(x, y);
+        motionCtx.lineTo(x + w * 0.72, y + 110);
+        motionCtx.stroke();
+      }
+
+      motionCtx.globalAlpha = 0.2;
+      motionCtx.strokeStyle = 'rgba(255,255,255,0.22)';
+      motionCtx.lineWidth = 1;
+      for (let x = -w; x < w * 2; x += 190) {
+        const shift = (t * 170 + x) % 190;
+        motionCtx.beginPath();
+        motionCtx.moveTo(x + shift, 0);
+        motionCtx.lineTo(x + shift - 240, h);
+        motionCtx.stroke();
+      }
+      motionCtx.globalAlpha = 1;
+      requestAnimationFrame(drawMotion);
+    }
+
+    window.addEventListener('resize', sizeMotionCanvas);
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') go(active - 1);
+      if (event.key === 'ArrowRight') go(active + 1);
+    });
+
+    sizeMotionCanvas();
+    requestAnimationFrame(drawMotion);
+    paint(active);
+  </script>
+</body>
+</html>
+

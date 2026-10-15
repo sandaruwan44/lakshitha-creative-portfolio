@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a0c">
+  <meta name="description" content="The portfolio of Lakshitha Sandaruwan. Explore websites, graphic design, photography and video projects.">
+  <title>Lakshitha Sandaruwan — Creative Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="projects-data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="cinematic.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to work</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Lakshitha Sandaruwan home">LS<span>/ 44</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work <span class="nav-count" data-project-count></span></a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-contact" href="mailto:lakshithasandaruwan118@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section id="cinematic-hero" class="hero" aria-labelledby="hero-title" aria-roledescription="slideshow">
+      <div class="hero-background"><video id="hero-video" src="assets/backgrounds/portfolio-cinematic.mp4" poster="assets/backgrounds/portfolio-cinematic.webp" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video><img id="hero-image" src="assets/backgrounds/portfolio-cinematic.webp" alt="A frame from my first-year portfolio background film" fetchpriority="high" width="1920" height="1080"></div>
+      <div class="hero-shade" aria-hidden="true"></div><div class="viewfinder" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="hero-main">
+        <p class="hero-kicker eyebrow"><span class="record-dot" aria-hidden="true"></span> Lakshitha Sandaruwan <span>Creative portfolio / 2026</span></p>
+        <h1 id="hero-title" aria-label="Visual Stories"><span data-title-line aria-hidden="true">VISUAL</span><span data-title-line aria-hidden="true">STORIES</span></h1>
+        <div class="hero-details"><p class="hero-description">I see a story.<br>Then I make it real.<span>Websites, design, photography & film.</span></p><span class="focus-mark" aria-hidden="true">+</span><div class="hero-feature"><span class="eyebrow">IN THE FRAME</span><p id="hero-project-name">Lakshitha Sandaruwan</p><a id="hero-view-work" class="text-link" href="#work">Explore the collection <span aria-hidden="true">↗</span></a></div></div>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-controls"><span class="eyebrow">SELECTED FRAMES <span id="hero-counter">01 / 07</span></span><div><button class="icon-button" id="hero-prev" aria-label="Previous featured project">←</button><button class="icon-button" id="hero-next" aria-label="Next featured project">→</button><button id="hero-pause" class="motion-button" aria-pressed="false">Pause motion</button></div></div>
+        <div id="hero-thumbnails" class="hero-thumbnails" role="group" aria-label="Choose a featured project"></div><div id="hero-timeline" class="hero-timeline" aria-hidden="true"></div>
+        <div class="hero-bottomline"><span>02 YEARS OF MAKING / <span data-project-count>22</span> PROJECTS</span><a href="#showcase">SCROLL TO DISCOVER ↓</a><span class="frame-label">FRAME / LS—44</span></div>
+      </div>
+    </section>
+
+    <section id="showcase" class="showcase" aria-labelledby="showcase-title"><div class="showcase-backdrop" aria-hidden="true"></div><div class="showcase-heading reveal"><p class="eyebrow">AN EXPLORATION IN EVERY MEDIUM</p><h2 id="showcase-title">IDEAS IN<br><span class="ice">MOTION.</span></h2><p>Different tools. The same creative instinct.</p></div><div class="showcase-shell"><div class="reel-scale" aria-hidden="true"><span>WEB / VISUAL / PHOTO / FILM</span><span>+ ┄┄┄┄┄┄┄ + ┄┄┄┄┄┄┄ +</span><span>THE SELECTED SERIES</span></div><div id="showcase-track" class="showcase-track"></div></div><div class="showcase-footer"><span class="eyebrow">A GLIMPSE INTO MY WORLD</span><button id="showcase-pause" class="motion-button" aria-pressed="false">Pause reel</button><a class="text-link" href="#work">View the collection <span aria-hidden="true">↓</span></a></div></section>
+
+    <section id="work" class="work-section wrap" aria-labelledby="work-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">01 / THE WORK — TWO YEARS OF EXPLORATION</p><h2 id="work-title">THE<br><span class="ice">COLLECTION.</span></h2></div><p>From my first line of HTML to visual stories through a lens. A collection of things I’ve learned, tried and made.</p></div>
+      <div class="work-toolbar">
+        <div class="filter-group" role="group" aria-label="Filter by discipline">
+          <button class="filter active" data-category="all" aria-pressed="true">All work <span data-project-count></span></button>
+          <button class="filter" data-category="web" aria-pressed="false">Websites</button>
+          <button class="filter" data-category="graphic" aria-pressed="false">Graphic design</button>
+          <button class="filter" data-category="photo" aria-pressed="false">Photography</button>
+          <button class="filter" data-category="video" aria-pressed="false">Videography</button>
+        </div>
+        <div class="filter-group year-filters" role="group" aria-label="Filter by academic year">
+          <button class="year-filter active" data-year="all" aria-pressed="true">All periods</button>
+          <button class="year-filter" data-year="1" aria-pressed="false">1st year</button>
+          <button class="year-filter" data-year="2" aria-pressed="false">2nd year</button>
+        </div>
+      </div>
+      <p id="filter-status" class="result-status" role="status" aria-live="polite"></p>
+      <div id="project-grid" class="project-grid"></div>
+      <noscript><p>Enable JavaScript to browse the project gallery. You can also open the website files in the projects folder.</p></noscript>
+      <div class="archive-note reveal"><span aria-hidden="true">+</span><p>Every frame. Every experiment.<br><span>Another step forward.</span></p><span class="archive-note-right"><b data-web-count>09</b> WEBSITES / 08 DESIGN COLLECTIONS / 04 PHOTO SERIES / 02 VIDEOS</span></div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title"><div class="wrap">
+      <div class="about-grid">
+        <div class="portrait-wrap reveal"><img src="assets/previews/profile.webp" alt="Lakshitha Sandaruwan carrying his camera" loading="lazy" width="1100" height="1100"><span class="portrait-label">LAKSHITHA SANDARUWAN / CREATOR</span><span class="portrait-cross" aria-hidden="true">+</span></div>
+        <div class="about-copy reveal"><p class="eyebrow">02 / BEHIND THE WORK</p><h2 id="about-title">CURIOUS<br>BY <span class="ice">DESIGN.</span></h2><p class="about-lead">A developer’s mind.<br>A visual storyteller’s eye.</p><p>I’m Lakshitha Sandaruwan. Over two years of study, I’ve explored web development, graphic design and motion. I enjoy finding an idea, trying different directions and bringing the details together.</p><p>Sometimes that means building a website. Sometimes it’s a Photoshop composition, an Illustrator layout or a night out with my camera. This portfolio is a record of that journey.</p><a class="text-link" href="mailto:lakshithasandaruwan118@gmail.com">Say hello <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="skills-heading"><p class="eyebrow">MY CREATIVE TOOLBOX</p><p>Tools I’ve explored through study and projects.</p></div>
+      <div class="skill-grid">
+        <div class="skill-card reveal"><span class="skill-symbol">&lt;/&gt;</span><h3>HTML5 & CSS3</h3><p>Responsive web development</p><span class="skill-note">Page structure · Layouts · Styling</span></div>
+        <div class="skill-card reveal"><span class="skill-symbol">JS</span><h3>JavaScript & React</h3><p>Interactive websites & application studies</p><span class="skill-note">Interfaces · Interactions · Components</span></div>
+        <div class="skill-card reveal"><span class="skill-symbol adobe ps">Ps</span><h3>Graphic design</h3><p>Adobe Photoshop</p><span class="skill-note">Compositing · Posters · Mockups</span></div>
+        <div class="skill-card reveal"><span class="skill-symbol adobe ai">Ai</span><h3>Visual communication</h3><p>Adobe Illustrator</p><span class="skill-note">Typography · Covers · Layouts</span></div>
+        <div class="skill-card reveal"><span class="skill-symbol">SQL</span><h3>SQL Server & SSMS</h3><p>Database management & SQL studies</p><span class="skill-note">Queries · Data · Database tools</span></div>
+        <div class="skill-card reveal"><span class="skill-symbol adobe ae">Ae</span><h3>After Effects & video</h3><p>Motion graphics & video editing</p><span class="skill-note">Animation · Editing · Visual storytelling</span></div>
+      </div>
+      <div class="journey reveal"><div><span>01</span><h3>The foundations</h3><p>First year</p></div><p>HTML, CSS, page layouts and visual design. Learning to turn a blank canvas into something I can share.</p><div class="journey-arrow" aria-hidden="true">→</div><div><span>02</span><h3>Bringing it together</h3><p>Second year</p></div><p>More interactive websites, product experiences and focused design. Growing through every project.</p></div>
+    </div></section>
+
+    <section id="contact" class="contact-section wrap" aria-labelledby="contact-title">
+      <p class="eyebrow reveal">03 / LET’S CONNECT</p>
+      <div class="contact-heading reveal"><h2 id="contact-title">LET’S MAKE<br><span class="ice">SOMETHING.</span></h2><a class="contact-circle" href="mailto:lakshithasandaruwan118@gmail.com" aria-label="Email Lakshitha"><span aria-hidden="true">↗</span></a></div>
+      <div class="contact-details reveal"><a class="email" href="mailto:lakshithasandaruwan118@gmail.com">lakshithasandaruwan118@gmail.com</a><div class="social-links"><a href="https://www.instagram.com/lakshitha_siriwardhana/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/lakshitha.sandaruwan.167189/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.youtube.com/@lakshithasandaruwan4093" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></div>
+      <footer><a class="brand" href="#top" aria-label="Back to top">LS<span>/ 44</span></a><p>© 2026 Lakshitha Sandaruwan</p><a href="#top">Back to top ↑</a></footer>
+    </section>
+  </main>
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header"><span id="dialog-category"></span><button class="icon-button" id="dialog-close" aria-label="Close project">×</button></div>
+    <div class="dialog-body"><div class="dialog-copy"><p class="eyebrow" id="dialog-year"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div id="dialog-tags" class="dialog-tags"></div><a id="dialog-visit" class="button button-lime" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a></div>
+      <div class="gallery-stage"><img id="gallery-image" alt=""><div class="gallery-controls"><button class="icon-button" id="gallery-prev" aria-label="Previous image">←</button><p id="gallery-caption" aria-live="polite"></p><button class="icon-button" id="gallery-next" aria-label="Next image">→</button></div></div><div id="video-stage" class="video-stage" hidden><iframe id="video-player" title="Video project" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>If the player is unavailable, use “Watch on YouTube” above.</p></div><div id="gallery-thumbs" class="gallery-thumbs" aria-label="Project images"></div><a id="gallery-original" class="original-link" target="_blank" rel="noopener noreferrer">Open full-resolution image ↗</a><a id="gallery-source" class="original-link" target="_blank" rel="noopener noreferrer" hidden>View original post ↗</a>
+    </div>
+  </dialog>
+</body>
+</html>

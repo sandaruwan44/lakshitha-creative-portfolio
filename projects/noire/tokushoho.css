@@ -1,0 +1,112 @@
+/* Tokushoho page: matches the main NOIRE storefront chrome. */
+
+.legal-page {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(185, 154, 98, .12), transparent 32%),
+    linear-gradient(180deg, #101317 0%, #171b21 48%, #101317 100%);
+  color: var(--cream);
+}
+
+.legal-page .site-header {
+  position: relative;
+}
+
+.legal-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 90px 7vw 110px;
+}
+
+.legal-content h1 {
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 500;
+  letter-spacing: -.03em;
+  line-height: .95;
+  margin: 0 0 52px;
+  text-align: center;
+}
+
+.legal-content h1::before {
+  content: "Legal information";
+  color: var(--gold);
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: .22em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.legal-item {
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 260px 1fr;
+  margin-bottom: 14px;
+  padding: 28px;
+}
+
+.legal-item h2 {
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  line-height: 1.6;
+  margin: 0;
+  text-transform: uppercase;
+  width: auto;
+}
+
+.legal-item p,
+.legal-item .item-content {
+  color: #c8c3b8;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+  width: auto;
+}
+
+.legal-item .item-content p,
+.legal-item .item-content ul {
+  width: 100%;
+}
+
+.legal-item .item-content h3 {
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.legal-item .item-content ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.legal-item .item-content li {
+  color: #c8c3b8;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.legal-item a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .legal-content {
+    padding: 70px 22px 85px;
+  }
+
+  .legal-item {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+}

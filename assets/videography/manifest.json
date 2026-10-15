@@ -1,0 +1,48 @@
+{
+  "videography": [
+    {
+      "id": "osaka-travel",
+      "videoId": "YQMzI5l7iTs",
+      "title": "Travel to osaka 🇯🇵",
+      "description": "A short Osaka travel video shared by the creator on YouTube.",
+      "subtitle": "Travel videography",
+      "duration": "0:31",
+      "source_url": "https://www.youtube.com/watch?v=YQMzI5l7iTs",
+      "embed_url": "https://www.youtube.com/embed/YQMzI5l7iTs",
+      "user_authorship_asserted": true,
+      "thumbnail": {
+        "path": "assets/previews/video/osaka.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 17120
+      },
+      "thumbnail_source": {
+        "path": "assets/previews/video/osaka.jpg",
+        "url": "https://i.ytimg.com/vi/YQMzI5l7iTs/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH8CYAC0AWKAgwIABABGE8gWShlMA8=&rs=AOn4CLBBVMF_dHxx2VRv0kA3H7ev_zdavw",
+        "bytes": 15662
+      }
+    },
+    {
+      "id": "sri-lanka-seminar",
+      "videoId": "qisv9WsInZU",
+      "title": "スリランカ ― 遺産とおもてなしの国 🇱🇰 (Sri Lanka – The Land of Heritage and Hospitality)",
+      "description": "A Sri Lanka seminar presentation video introducing the country's heritage and hospitality.",
+      "subtitle": "Seminar presentation video",
+      "duration": "3:36",
+      "source_url": "https://www.youtube.com/watch?v=qisv9WsInZU",
+      "embed_url": "https://www.youtube.com/embed/qisv9WsInZU",
+      "user_authorship_asserted": true,
+      "thumbnail": {
+        "path": "assets/previews/video/sri-lanka-seminar.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 42118
+      },
+      "thumbnail_source": {
+        "path": "assets/previews/video/sri-lanka-seminar.jpg",
+        "url": "https://i.ytimg.com/vi/qisv9WsInZU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSCgzMA8=&rs=AOn4CLBn5uembFhQMzficefPRwhFnbKdgQ",
+        "bytes": 62664
+      }
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "graphics": [
+    {
+      "id": "hamilton-dvd",
+      "cover": "assets/previews/graphics/hamilton-44-dvd-cover-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/hamilton-44-dvd-cover.jpg",
+          "label": "Full DVD jacket",
+          "preview": "assets/previews/graphics/hamilton-44-dvd-cover.webp",
+          "width": 1600,
+          "height": 1070,
+          "bytes": 248992,
+          "thumbnail": "assets/previews/graphics/hamilton-44-dvd-cover-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 602,
+          "thumbnail_bytes": 102402
+        }
+      ]
+    },
+    {
+      "id": "japan-book",
+      "cover": "assets/previews/graphics/japan-magic-country-book-jacket-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/japan-magic-country-book-jacket.png",
+          "label": "Full book jacket",
+          "preview": "assets/previews/graphics/japan-magic-country-book-jacket.webp",
+          "width": 1600,
+          "height": 957,
+          "bytes": 130370,
+          "thumbnail": "assets/previews/graphics/japan-magic-country-book-jacket-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 538,
+          "thumbnail_bytes": 46464
+        }
+      ]
+    },
+    {
+      "id": "open-campus",
+      "cover": "assets/previews/graphics/open-campus-subway-mockup-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/open-campus-subway-mockup.png",
+          "label": "Three-poster subway mockup",
+          "preview": "assets/previews/graphics/open-campus-subway-mockup.webp",
+          "width": 1600,
+          "height": 1024,
+          "bytes": 148094,
+          "thumbnail": "assets/previews/graphics/open-campus-subway-mockup-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 576,
+          "thumbnail_bytes": 56694
+        },
+        {
+          "source": "assets/graphics/open-campus-blue.png",
+          "label": "Blue poster",
+          "preview": "assets/previews/graphics/open-campus-blue.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 99044,
+          "thumbnail": "assets/previews/graphics/open-campus-blue-thumb.webp",
+          "thumbnail_width": 636,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 46116
+        },
+        {
+          "source": "assets/graphics/open-campus-turquoise.png",
+          "label": "Turquoise poster",
+          "preview": "assets/previews/graphics/open-campus-turquoise.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 112814,
+          "thumbnail": "assets/previews/graphics/open-campus-turquoise-thumb.webp",
+          "thumbnail_width": 636,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 46710
+        },
+        {
+          "source": "assets/graphics/open-campus-pink.png",
+          "label": "Pink poster",
+          "preview": "assets/previews/graphics/open-campus-pink.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 148710,
+          "thumbnail": "assets/previews/graphics/open-campus-pink-thumb.webp",
+          "thumbnail_width": 636,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 58214
+        },
+        {
+          "source": "assets/graphics/open-campus-station-pillar.png",
+          "label": "Station pillar mockup",
+          "preview": "assets/previews/graphics/open-campus-station-pillar.webp",
+          "width": 1600,
+          "height": 1200,
+          "bytes": 192108,
+          "thumbnail": "assets/previews/graphics/open-campus-station-pillar-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 675,
+          "thumbnail_bytes": 75524
+        }
+      ]
+    },
+    {
+      "id": "ninja-vibe",
+      "cover": "assets/previews/graphics/ninja-vibe-packaging-mockup-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/ninja-vibe-packaging-mockup.png",
+          "label": "Two snack bag mockups",
+          "preview": "assets/previews/graphics/ninja-vibe-packaging-mockup.webp",
+          "width": 1600,
+          "height": 900,
+          "bytes": 82470,
+          "thumbnail": "assets/previews/graphics/ninja-vibe-packaging-mockup-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 506,
+          "thumbnail_bytes": 33656
+        },
+        {
+          "source": "assets/graphics/ninja-vibe-smoke.png",
+          "label": "Smoke variant",
+          "preview": "assets/previews/graphics/ninja-vibe-smoke.webp",
+          "width": 1028,
+          "height": 1514,
+          "bytes": 88276,
+          "thumbnail": "assets/previews/graphics/ninja-vibe-smoke-thumb.webp",
+          "thumbnail_width": 611,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 42786
+        },
+        {
+          "source": "assets/graphics/ninja-vibe-fire.png",
+          "label": "Fire variant",
+          "preview": "assets/previews/graphics/ninja-vibe-fire.webp",
+          "width": 1028,
+          "height": 1514,
+          "bytes": 134822,
+          "thumbnail": "assets/previews/graphics/ninja-vibe-fire-thumb.webp",
+          "thumbnail_width": 611,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 62052
+        }
+      ]
+    },
+    {
+      "id": "hamilton-vogue",
+      "cover": "assets/previews/graphics/hamilton-vogue-cover-study-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/hamilton-vogue-cover-study.jpg",
+          "label": "Magazine cover",
+          "preview": "assets/previews/graphics/hamilton-vogue-cover-study.webp",
+          "width": 1280,
+          "height": 1600,
+          "bytes": 104584,
+          "thumbnail": "assets/previews/graphics/hamilton-vogue-cover-study-thumb.webp",
+          "thumbnail_width": 720,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 48734
+        },
+        {
+          "source": "assets/graphics/hamilton-vogue-monochrome-cover-study.jpg",
+          "label": "Monochrome magazine cover",
+          "preview": "assets/previews/graphics/hamilton-vogue-monochrome-cover-study.webp",
+          "width": 1228,
+          "height": 1536,
+          "bytes": 125330,
+          "thumbnail": "assets/previews/graphics/hamilton-vogue-monochrome-cover-study-thumb.webp",
+          "thumbnail_width": 720,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 62774
+        }
+      ]
+    },
+    {
+      "id": "demon-slayer",
+      "cover": "assets/previews/graphics/demon-slayer-love-water-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/demon-slayer-love-water.png",
+          "label": "Love and water spread",
+          "preview": "assets/previews/graphics/demon-slayer-love-water.webp",
+          "width": 1600,
+          "height": 1131,
+          "bytes": 190904,
+          "thumbnail": "assets/previews/graphics/demon-slayer-love-water-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 636,
+          "thumbnail_bytes": 80308
+        },
+        {
+          "source": "assets/graphics/demon-slayer-thunder-fire.png",
+          "label": "Thunder and fire spread",
+          "preview": "assets/previews/graphics/demon-slayer-thunder-fire.webp",
+          "width": 1600,
+          "height": 1131,
+          "bytes": 211920,
+          "thumbnail": "assets/previews/graphics/demon-slayer-thunder-fire-thumb.webp",
+          "thumbnail_width": 900,
+          "thumbnail_height": 636,
+          "thumbnail_bytes": 88250
+        }
+      ]
+    },
+    {
+      "id": "sri-lankan-festival",
+      "cover": "assets/previews/graphics/sri-lankan-festival-2025-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/sri-lankan-festival-2025.png",
+          "label": "Event poster",
+          "preview": "assets/previews/graphics/sri-lankan-festival-2025.webp",
+          "width": 1244,
+          "height": 1600,
+          "bytes": 329302,
+          "thumbnail": "assets/previews/graphics/sri-lankan-festival-2025-thumb.webp",
+          "thumbnail_width": 700,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 122500
+        }
+      ]
+    },
+    {
+      "id": "lando-poster",
+      "cover": "assets/previews/graphics/lando-norris-concept-poster-study-thumb.webp",
+      "files": [
+        {
+          "source": "assets/graphics/lando-norris-concept-poster-study.jpg",
+          "label": "Motorsport concept poster",
+          "preview": "assets/previews/graphics/lando-norris-concept-poster-study.webp",
+          "width": 1096,
+          "height": 1536,
+          "bytes": 245592,
+          "thumbnail": "assets/previews/graphics/lando-norris-concept-poster-study-thumb.webp",
+          "thumbnail_width": 642,
+          "thumbnail_height": 900,
+          "thumbnail_bytes": 112142
+        }
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "preview": "assets/previews/web/pufe.webp",
+      "width": 1400,
+      "height": 933,
+      "bytes": 122592,
+      "id": "pufe",
+      "source": "projects/pufe/images/hero.jpg",
+      "kind": "hero image"
+    },
+    {
+      "preview": "assets/previews/web/noire.webp",
+      "width": 1400,
+      "height": 933,
+      "bytes": 70374,
+      "id": "noire",
+      "source": "projects/noire/hero.png",
+      "kind": "hero poster image"
+    },
+    {
+      "preview": "assets/previews/web/sneaker.webp",
+      "width": 979,
+      "height": 603,
+      "bytes": 92932,
+      "id": "sneaker",
+      "source": "projects/sneaker/assets/shoe-imperial-purple.png",
+      "kind": "product cutout"
+    },
+    {
+      "preview": "assets/previews/web/yakitori.webp",
+      "width": 1400,
+      "height": 788,
+      "bytes": 66056,
+      "id": "yakitori",
+      "source": "projects/yakitori/assets/hero.webp",
+      "kind": "hero image"
+    },
+    {
+      "preview": "assets/previews/web/japan-guide.webp",
+      "width": 1400,
+      "height": 934,
+      "bytes": 314056,
+      "id": "japan-guide",
+      "source": "projects/japan-guide/img/shibuya.jpg",
+      "kind": "destination image used in project"
+    },
+    {
+      "preview": "assets/previews/web/sri-lanka.webp",
+      "width": 1400,
+      "height": 933,
+      "bytes": 164512,
+      "id": "sri-lanka",
+      "source": "projects/sri-lanka-guide/img/sigiriya.jpg",
+      "kind": "destination image used in project"
+    },
+    {
+      "id": "year1-portfolio",
+      "preview": "assets/previews/web/year1-portfolio.webp",
+      "width": 400,
+      "height": 300,
+      "bytes": 11002,
+      "source": "projects/year1-portfolio/img/WORK THUMB.png",
+      "kind": "project thumbnail included in first-year portfolio"
+    }
+  ],
+  "profile": {
+    "preview": "assets/previews/profile.webp",
+    "width": 1100,
+    "height": 1100,
+    "bytes": 202596,
+    "source": "projects/year1-portfolio/img/IMG_0500.JPG"
+  },
+  "total_bytes": 4722778
+}

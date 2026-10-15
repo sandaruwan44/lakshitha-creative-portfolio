@@ -1,0 +1,22 @@
+# Machine-specific hosting state and editor files
+.openai/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment settings and temporary build files
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.py[cod]
+*.log
+
+# Local-only import helpers; the portable data generator is included
+add_selected_photo_collections.py
+add_photography_preview.py
+build_previews.py
+add_tokyo_portraits.py
+build_poster.py

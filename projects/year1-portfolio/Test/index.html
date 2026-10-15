@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewis Hamilton</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Lewis Hamilton</div>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">LH LIVE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero / Slider -->
+  <section class="hero">
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="../photo/lewis main 1.png" alt="Lewis Hamilton main">
+        </div>
+        <div class="slide">
+          <img src="../photo/lewi cover 2.png" alt="Lewis Hamilton cover 2">
+        </div>
+        <div class="slide">
+          <img src="../photo/lewi cover 3.png" alt="Lewis Hamilton cover 3">
+        </div>
+      </div>
+
+      <button class="arrow prev">&#10094;</button>
+      <button class="arrow next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Content Section 1 -->
+  <section class="content">
+    <div class="image">
+      <img src="../photo/Lewis-Hamilton-Young.jpeg" alt="Lewis Hamilton young">
+    </div>
+    <div class="text">
+      <h2>
+        Introduction to Lewis Hamilton
+        <span>Admin May 10, 2020</span>
+      </h2>
+      <p>
+        Many of us know him as the six-time formula one world champion, 
+        Lewis Carl Davidson Hamilton has gone on to be the world’s 
+        greatest and highly esteemed drivers in the history of the sport. 
+        He was born on 7th January 1985 in Stevenage, Hertfordshire, England.
+        He was raised as Roman Catholic by his parents, Carmen, and Anthony. 
+        He lived with his mother until the age of twelve, then moved to live 
+        with his father. His relationship with his father then bloomed his love 
+        for racing, a gift of a radio-controlled car was his first taste into the
+        world of racing. It was when Hamilton was 6 years old that his father bought
+        him a go-kart for Christmas in which a promise had been made between the father-
+        son duo; he would continue to support young Lewis with his racing career as 
+        long as he continued to work hard in school. 
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section 2 (reversed layout) -->
+  <section class="content reverse">
+    <div class="image">
+      <img src="../photo/1.png" alt="Ferrari era Lewis Hamilton">
+    </div>
+    <div class="text">
+      <h2>
+        Hamilton on brink of unwanted record as Ferrari dream risks becoming a nightmare
+        <span>Admin June 27, 2025</span>
+      </h2>
+      <p>
+        Spielberg, Austria – For a man with more victories and podiums than any other driver in Formula One history,
+        Lewis Hamilton is facing a sobering new reality. As he prepares for this weekend’s Austrian Grand Prix, 
+        the seven-time world champion is not battling for a title, but against an unwelcome entry into his own record…
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section 3 -->
+  <section class="content">
+    <div class="image">
+      <img src="../photo/age 3.png" alt="Lewis Hamilton Ferrari move">
+    </div>
+    <div class="text">
+      <h2>
+        A Gamble, a Legacy, and a Seismic Shift in Formula 1
+        <span>About February 6, 2025</span>
+      </h2>
+      <p>
+        The whispers have become roars. The rumours, reality. Lewis Hamilton, the seven-time Formula 1 World Champion,
+        is swapping silver for red, embarking on a seismic shift in his career by joining Scuderia Ferrari. This isn’t 
+        just a driver change; it’s a tectonic plate shift in the landscape of motorsport, a move that reverberates with history,…
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="right">LEWIS HAMILTON</p>
+    <p class="left">&copy; 2025 Lakshitha Sandaruwan</p>
+  </footer>
+
+  <!-- Slider Script -->
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slideCount) % slideCount;
+      showSlide(index);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slideCount;
+      showSlide(index);
+    });
+
+    // Optional: auto play
+    // setInterval(() => {
+    //   index = (index + 1) % slideCount;
+    //   showSlide(index);
+    // }, 5000);
+  </script>
+</body>
+</html>
